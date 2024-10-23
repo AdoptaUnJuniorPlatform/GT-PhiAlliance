@@ -1,5 +1,10 @@
-import styles from "./Header.module.css";
+import Section from "../Section/Section";
+import ResponsiveAppBar from "./Navbar/Navbar";
 
 export default function Header() {
-  return <div className={styles.header}>Header</div>;
+    return (
+        <Section>
+            <ResponsiveAppBar />
+        </Section>
+    )
 }
