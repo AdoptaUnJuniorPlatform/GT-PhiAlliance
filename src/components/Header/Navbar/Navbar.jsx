@@ -24,15 +24,11 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "white" }} elevation={0}>
-      <Toolbar
-        disableGutters
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          margin: "1rem 5rem 1rem 5rem",
-        }}
-      >
+    <AppBar
+      position="static"
+      sx={{ backgroundColor: "white", width: "100%", padding: "1rem" }}
+    >
+      <Toolbar disableGutters>
         <Box
           component={"section"}
           sx={{
