@@ -1,55 +1,3 @@
-// import React from "react";
-// import Section from "../Section/Section";
-// import './Team.css'; 
-
-// // Componente para cada círculo interactivo
-// const InteractiveCircle = ({ color, text, link, size, position }) => {
-//   return (
-//     <a href={link} className={`circle interactive-circle ${color} ${size}`} style={position}>
-//       <span className="hover-text">{text}</span>
-//     </a>
-//   );
-// };
-
-// export default function Team() {
-//   return (
-//     <Section>
-//       <div className="comunidad-container">
-//         <h1 className="comunidad-title">Comunidad PHI</h1>
-//         <p className="comunidad-subtitle">Lorem ipsum dolor sit amet consectetur. Id at elementum</p>
-
-//         {/* Línea horizontal central */}
-//         <div className="comunidad-line">
-//           {/* Círculo central sobre la línea */}
-//           <div className="circle central-circle orange">
-//             <span className="circle-icon">Φ</span>
-//           </div>
-//         </div>
-
-//         {/* Círculos interactivos y decorativos */}
-//         <div className="circles-container">
-//           <InteractiveCircle color="yellow" text="Benefactores" link="/link1" size="medium" position={{ top: "10%", left: "30%" }} />
-//           <InteractiveCircle color="purple2" text="Colaboradores" link="/link2" size="large" position={{ top: "-10%", right: "40%" }} />
-//           <InteractiveCircle color="purple" text="Voluntarios" link="/link3" size="medium" position={{ top: "15%", right: "15%" }} />
-//           <InteractiveCircle color="green" text="Socios" link="/link4" size="large" position={{ top: "55%", left: "20%" }} />
-//           <InteractiveCircle color="teal" text="Patrocinadores" link="/link5" size="xlarge" position={{ top: "45%", right: "30%" }} />
-
-//           {/* Otros círculos decorativos sin interacción */}
-//           <div className="circle decor-circle small green" style={{ top: "5%", right: "28%" }}></div>
-//           <div className="circle decor-circle xsmall purple2" style={{ top: "23%", right: "32%" }}></div>
-//           <div className="circle decor-circle small violet" style={{ top: "40%", left: "27%" }}></div>
-          
-//         </div>
-
-//         {/* Botón de Únete */}
-//         <div className="button-container">
-//           <a href="/join" className="join-button">Únete</a>
-//         </div>
-//       </div>
-//     </Section>
-//   );
-// }
-
 import React from "react";
 import Section from "../Section/Section";
 import { Box, Typography, Button } from '@mui/material';
@@ -105,6 +53,7 @@ export default function Team() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
+          
         }}
       >
         <Typography variant="h1" sx={{ fontSize: { xs: "5vw", md: "3vw" }, color: "#00695c", mb: "0.5vw", textAlign: "left" }}>
@@ -143,27 +92,17 @@ export default function Team() {
           >
             Φ
           </Box>
-        </Box>
 
-        {/* Círculos interactivos y decorativos */}
-        <Box sx={{ position: "relative", width: "100%", height: "100%" }}>
-          {/* Círculos interactivos */}
-          <InteractiveCircle color="#febd3b" text="Benefactores" link="/link1" size="8vw" position={{ top: "10%", left: "30%" }} />
-          <InteractiveCircle color="#350076" text="Colaboradores" link="/link2" size="9vw" position={{ top: "-10%", right: "40%" }} />
-          <InteractiveCircle color="#9663d6b6" text="Voluntarios" link="/link3" size="7vw" position={{ top: "15%", right: "15%" }} />
-          <InteractiveCircle color="#217954" text="Socios" link="/link4" size="8vw" position={{ top: "70%", left: "20%" }} />
-          <InteractiveCircle color="#02cdb8" text="Patrocinadores" link="/link5" size="10vw" position={{ top: "55%", right: "20%" }} />
-
-          {/* Círculos decorativos sin interacción */}
+          {/* Círculos decorativos */}
           <Box
             sx={{
               backgroundColor: "#217954",
-              width: "4vw",
-              height: "4vw",
+              width: "3vw",
+              height: "3vw",
               borderRadius: "50%",
               position: "absolute",
-              top: "5%",
-              right: "28%",
+              top: "-3500%",
+              right: "30%",
               opacity: 0.6,
             }}
           />
@@ -174,32 +113,67 @@ export default function Team() {
               height: "2vw",
               borderRadius: "50%",
               position: "absolute",
-              top: "28%",
-              right: "32%",
+              top: "-1500%",
+              right: "35%",
               opacity: 0.6,
             }}
           />
           <Box
             sx={{
               backgroundColor: "#c8a2fd",
-              width: "4vw",
-              height: "4vw",
+              width: "3vw",
+              height: "3vw",
               borderRadius: "50%",
               position: "absolute",
-              top: "50%",
+              top: "1000%",
               left: "27%",
               opacity: 0.6,
             }}
           />
+          
+          <Box
+            sx={{
+              position: "relative",
+              backgroundColor: "#000000",
+              width: "2vw",
+              height: "2vw",
+              borderRadius: "50%",
+              top: "-0.8vw",
+              left: "-2%",
+            }}
+          />
+          <Box
+            sx={{
+              backgroundColor: "#000000",
+              width: "2vw",
+              height: "2vw",
+              borderRadius: "50%",
+              position: "absolute",
+              top: "-0.8vw",
+              right: "-2%",
+            }}
+          />
         </Box>
 
- {/* Botón Únete */}
- <Box sx={{ marginTop: "auto", textAlign: "center", py: 3 }}>
+        {/* Círculos interactivos y decorativos */}
+        <Box sx={{ position: "relative", width: "100%", height: "100%" }}>
+          {/* Círculos interactivos */}
+          <InteractiveCircle color="#febd3b" text="Benefactores" link="/link1" size="8vw" position={{ top: "10%", left: "30%" }} />
+          <InteractiveCircle color="#350076" text="Colaboradores" link="/link2" size="9vw" position={{ top: "-5%", right: "40%" }} />
+          <InteractiveCircle color="#9663d6b6" text="Voluntarios" link="/link3" size="7vw" position={{ top: "10%", right: "20%" }} />
+          <InteractiveCircle color="#217954" text="Socios"  link="/link4" size="8vw" position={{ top: { xs: "40%",sm:"50%", md: "65%" }, left: "20%"}} />
+          <InteractiveCircle color="#02cdb8" text="Patrocinador" link="/link5" size="9vw" position={{ top: { xs: "30%",sm:"40%", md: "55%" }, right: "25%"  }} />
+        </Box>
+        
+
+        {/* Botón Únete */}
+        <Box sx={{ marginTop: "auto", textAlign: "center", py: 3 }}>
           <Button
             href="/join"
             variant="outlined"
             sx={{
               padding: "0.5vw 1.5vw",
+              top:"6%",
               borderColor: "#00695c",
               borderRadius: "2vw",
               color: "#00695c",
@@ -219,5 +193,6 @@ export default function Team() {
     </Section>
   );
 }
+
 
 
