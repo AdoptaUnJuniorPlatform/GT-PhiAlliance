@@ -1,8 +1,9 @@
 import { Box, Container, Typography } from "@mui/material";
 import Section from "../Section/Section";
-import ScienceIcon from '@mui/icons-material/Science'; // Icono para "Qué"
-import StarsIcon from '@mui/icons-material/Stars'; // Icono para "Para Qué"
-import MemoryIcon from '@mui/icons-material/Memory'; // Icono para "Cómo"
+import Card from "./Card/Card";
+import GalaxiaIcon from "../Icons/GalaxiaIcon";
+import IAIcon from "../Icons/IAIcon";
+import EstrellasIcon from "../Icons/EstrellasIcon";
 
 export default function QueYParaQue() {
   return (
@@ -18,11 +19,11 @@ export default function QueYParaQue() {
           gap: "2rem",
         }}
       >
-        {/* Título principal alineado a la izquierda y en dos líneas */}
+
         <Box width="100%" mb={4} sx={{ textAlign: "left" }}>
-          <Typography 
-            variant="h1" 
-            fontSize="5rem" 
+          <Typography
+            variant="h1"
+            fontSize="5rem"
             sx={{
               whiteSpace: "pre-wrap",
               lineHeight: "1.2",
@@ -34,73 +35,18 @@ export default function QueYParaQue() {
 
         {/* Contenedor para las tarjetas en fila */}
         <Box
+          position="relative"
           display="flex"
           justifyContent="space-between"
           alignItems="center"
           sx={{ width: "100%" }}
         >
           {/* Tarjeta 1 */}
-          <Box
-            sx={{
-              backgroundColor: "#6BC3C1",
-              color: "black",
-              padding: "2rem",
-              borderRadius: "50px",
-              width: "400px",
-              height: "450px",
-              textAlign: "left",
-            }}
-          >
-            <ScienceIcon sx={{ fontSize: "3rem" }} />
-            <Typography variant="h5" fontWeight="bold" gutterBottom>
-              Qué
-            </Typography>
-            <Typography variant="body2">
-              Lorem ipsum dolor sit amet consectetur.
-            </Typography>
-          </Box>
-
+          <Card description="Lorem ipsum dolor sit amet consectetur." icon={<GalaxiaIcon />} title="Qué" color="blue" />
           {/* Tarjeta 2 */}
-          <Box
-            sx={{
-              backgroundColor: "#5B4B8A",
-              color: "white",
-              padding: "2rem",
-              borderRadius: "50px",
-              width: "400px",
-              height: "450px",
-              textAlign: "left",
-            }}
-          >
-            <StarsIcon sx={{ fontSize: "3rem" }} />
-            <Typography variant="h5" fontWeight="bold" gutterBottom>
-              Para Qué
-            </Typography>
-            <Typography variant="body2">
-              Lorem ipsum dolor sit amet consectetur.
-            </Typography>
-          </Box>
-
+          <Card description="Lorem ipsum dolor sit amet consectetur." icon={<EstrellasIcon />} title="Para Qué" color="purple" />
           {/* Tarjeta 3 */}
-          <Box
-            sx={{
-              backgroundColor: "#F3B63A",
-              color: "black",
-              padding: "2rem",
-              borderRadius: "50px",
-              width: "400px",
-              height: "450px",
-              textAlign: "left",
-            }}
-          >
-            <MemoryIcon sx={{ fontSize: "3rem" }} />
-            <Typography variant="h5" fontWeight="bold" gutterBottom>
-              Cómo
-            </Typography>
-            <Typography variant="body2">
-              Lorem ipsum dolor sit amet consectetur.
-            </Typography>
-          </Box>
+          <Card description="Lorem ipsum dolor sit amet consectetur." icon={<IAIcon />} title="Cómo" color="yellow" />
         </Box>
       </Container>
     </Section>
