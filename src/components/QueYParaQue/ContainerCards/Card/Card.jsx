@@ -1,6 +1,6 @@
 import styles from "./Card.module.css";
 
-export default function Card({ icon, title, description, color }) {
+export default function Card({ icon, title, description, color, size, handleSize }) {
     const getClassName = () => {
         switch (color) {
             case "blue":
@@ -14,11 +14,18 @@ export default function Card({ icon, title, description, color }) {
         }
     };
 
-    return (
-        <div className={getClassName()}>
+
+    return size ? (
+        <div className={getClassName()} onMouseEnter={handleSize}>
             <div>{icon}</div>
             <span>{title}</span>
             <p>{description}</p>
         </div>
-    );
+    ) : (
+        <div className={`${getClassName()} ${styles.cardMaxWidth}`} onMouseLeave={handleSize}>  
+            <div>{icon}</div>
+            <span>{title}</span>
+            <p>{description}</p>
+        </div>
+    )
 }

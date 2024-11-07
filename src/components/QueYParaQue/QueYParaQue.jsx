@@ -1,9 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 import Section from "../Section/Section";
-import Card from "./Card/Card";
-import GalaxiaIcon from "../Icons/GalaxiaIcon";
-import IAIcon from "../Icons/IAIcon";
-import EstrellasIcon from "../Icons/EstrellasIcon";
+import ContainerCards from "./ContainerCards/ContainerCards";
 
 export default function QueYParaQue() {
   return (
@@ -34,20 +31,7 @@ export default function QueYParaQue() {
         </Box>
 
         {/* Contenedor para las tarjetas en fila */}
-        <Box
-          position="relative"
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center"
-          sx={{ width: "100%" }}
-        >
-          {/* Tarjeta 1 */}
-          <Card description="Lorem ipsum dolor sit amet consectetur." icon={<GalaxiaIcon />} title="Qué" color="blue" />
-          {/* Tarjeta 2 */}
-          <Card description="Lorem ipsum dolor sit amet consectetur." icon={<EstrellasIcon />} title="Para Qué" color="purple" />
-          {/* Tarjeta 3 */}
-          <Card description="Lorem ipsum dolor sit amet consectetur." icon={<IAIcon />} title="Cómo" color="yellow" />
-        </Box>
+        <ContainerCards />
       </Container>
     </Section>
   );
