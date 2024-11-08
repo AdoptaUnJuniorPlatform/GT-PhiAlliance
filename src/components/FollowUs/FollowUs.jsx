@@ -6,6 +6,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Image1 from "../../assets/images/Imagen tarjeta blog 1.webp";
 import Image2 from "../../assets/images/Imagen tarjeta blog 2.webp";
 import Image3 from "../../assets/images/Imagen tarjeta blog 3.webp";
+import "./FollowUs.css";
 
 export default function FollowUs() {
   const cardsData = [
@@ -42,7 +43,7 @@ export default function FollowUs() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          padding: { xs: "2rem 1rem", md: "2rem 8rem" },
+          padding: { xs: "2rem 1rem", md: "3rem 8rem" },
         }}
       >
         {/* Título de la Sección */}
@@ -70,15 +71,29 @@ export default function FollowUs() {
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
                 maxWidth: { xs: "100%", md: "30%" },
                 minWidth: 0, 
+                transition:"box-shadow 0.3s ease",
+                "&:hover":{
+                  boxShadow: "0 8px 16px rgba(96, 191, 186, 0.5)",
+                },
+                "&:hover .card-image": {
+                transform: "scale(1.04)", 
+                },
+                "&:hover .bounce-icon": {
+                animation: "bounce 0.6s ease-in-out", 
+                },
               }}
             >
               {/* Imagen */}
               <CardMedia
+                className="card-image"
                 component="img"
-                height="200"
+                height="300"
                 image={card.image}
                 alt={`Image ${index + 1}`}
-                sx={{ borderRadius: "4px 4px 0 0" }}
+                sx={{ 
+                  borderRadius: "4px 4px 0 0",
+                  transition: "transform 1s ease",
+                 }}
               />
 
               {/* Contenido de la Tarjeta */}
@@ -96,7 +111,11 @@ export default function FollowUs() {
                 <Button
                   size="small"
                   color="primary"
-                  endIcon={<ArrowForwardIcon />}
+                  endIcon={
+                  <ArrowForwardIcon
+                  className="bounce-icon"
+                  sx={{fontSize:"1.5rem"}}
+                  />}
                   sx={{ textTransform: "none", fontWeight: "bold", color: "#00695c" }}
                   href={card.link}
                 >
