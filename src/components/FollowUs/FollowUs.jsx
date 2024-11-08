@@ -76,7 +76,7 @@ export default function FollowUs() {
                   boxShadow: "0 8px 16px rgba(96, 191, 186, 0.5)",
                 },
                 "&:hover .card-image": {
-                transform: "scale(1.03)", 
+                transform: "scale(1.04)", 
                 },
                 "&:hover .bounce-icon": {
                 animation: "bounce 0.6s ease-in-out", 
