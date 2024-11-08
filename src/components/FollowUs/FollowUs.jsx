@@ -76,10 +76,10 @@ export default function FollowUs() {
                   boxShadow: "0 8px 16px rgba(96, 191, 186, 0.5)",
                 },
                 "&:hover .card-image": {
-                transform: "scale(1.03)", // Aplica el zoom a la imagen
+                transform: "scale(1.03)", 
                 },
                 "&:hover .bounce-icon": {
-                animation: "bounce 0.6s ease-in-out", // Aplica animación de rebote
+                animation: "bounce 0.6s ease-in-out", 
                 },
               }}
             >
