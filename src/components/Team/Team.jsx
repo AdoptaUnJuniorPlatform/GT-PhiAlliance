@@ -1,15 +1,21 @@
 import React from "react";
 import Section from "../Section/Section";
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, colors } from '@mui/material';
 import NorthEastIcon from '@mui/icons-material/NorthEast';
 import GalaxyImg from "../../assets/images/Galaxy.png";
 
 // Variables de estilo
 const COLORS = {
-  primary: "#00695c",
-  secondary: "#f28c26",
-  black: "#000",
-  lightGrey: "#686868",
+  green300: "#007a75",
+  yellow300: "#ffb802",
+  black: "#121212",
+  grey: "#636363",
+  purple300: "#574ea0",
+  purple200: "#9b84ee",
+  green200: "#60bfba",
+  yellow200: "#fcbf1b",
+  purple100: "#dec8fe",
+  white: "#ffffff",
 };
 const SIZES = {
   circleBase: "7vw",
@@ -33,9 +39,8 @@ const InteractiveCircle = ({ color, text, link, size, position }) => (
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      color: "#fff",
       textDecoration: "none",
-      fontSize: SIZES.fontSizeSmall, 
+      fontSize: SIZES.fontSizeSmall,
       textAlign: "center",
       overflow: "hidden",
       whiteSpace: "nowrap",
@@ -44,8 +49,9 @@ const InteractiveCircle = ({ color, text, link, size, position }) => (
       transform: "scale(1)",
       transition: "transform 0.3s ease",
       "&:hover": {
-        transform: "scale(1.2)", 
-        "& .hover-text": { display: "block" },
+        transform: "scale(1.2)",
+        
+        "& .hover-text": { display: "block", color:COLORS.white },
       },
     }}
   >
@@ -54,7 +60,6 @@ const InteractiveCircle = ({ color, text, link, size, position }) => (
     </Typography>
   </Box>
 );
-
 
 export default function Team() {
   return (
@@ -82,15 +87,15 @@ export default function Team() {
             backgroundImage: `url(${GalaxyImg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            opacity: 0.4,
+            opacity: 0.2,
             zIndex: -1,
           },
         }}
       >
-        <Typography variant="h1" sx={{ fontSize: { xs: "5vw", md: "3vw" }, color: COLORS.primary, mb: "0.5vw", textAlign: "left" }}>
+        <Typography variant="h1" sx={{ fontSize: { xs: "5vw", md: "3vw" }, color: COLORS.green300, mb: "0.5vw", textAlign: "left" }}>
           Comunidad PHI
         </Typography>
-        <Typography variant="h6" sx={{ fontSize: { xs: "3vw", md: "1.2vw" }, color: COLORS.lightGrey, mb: "1vw", textAlign: "left" }}>
+        <Typography variant="h6" sx={{ fontSize: { xs: "3vw", md: "1.2vw" }, color: COLORS.grey, mb: "1vw", textAlign: "left" }}>
           Lorem ipsum dolor sit amet consectetur. Id at elementum
         </Typography>
 
@@ -114,11 +119,11 @@ export default function Team() {
               alignItems: "center",
               justifyContent: "center",
               fontSize: "2.5vw",
-              color: "#fff",
+              color: COLORS.white,
               top: "-6vw",
               left: "50%",
               transform: "translateX(-50%)",
-              backgroundColor: COLORS.secondary,
+              backgroundColor: COLORS.yellow300,
             }}
           >
             Φ
@@ -127,7 +132,7 @@ export default function Team() {
           {/* Círculos decorativos */}
           <Box
             sx={{
-              backgroundColor: "#217954",
+              backgroundColor: COLORS.green300,
               width: "2vw",
               height: "2vw",
               borderRadius: "50%",
@@ -139,7 +144,7 @@ export default function Team() {
           />
           <Box
             sx={{
-              backgroundColor: "#350076",
+              backgroundColor: COLORS.purple300,
               width: "1vw",
               height: "1vw",
               borderRadius: "50%",
@@ -151,7 +156,7 @@ export default function Team() {
           />
           <Box
             sx={{
-              backgroundColor: "#c8a2fd",
+              backgroundColor: COLORS.purple100,
               width: "2vw",
               height: "2vw",
               borderRadius: "50%",
@@ -164,7 +169,7 @@ export default function Team() {
           <Box
             sx={{
               position: "relative",
-              backgroundColor: "#000000",
+              backgroundColor: COLORS.black,
               width: "2vw",
               height: "2vw",
               borderRadius: "50%",
@@ -174,7 +179,7 @@ export default function Team() {
           />
           <Box
             sx={{
-              backgroundColor: "#000000",
+              backgroundColor: COLORS.black,
               width: "2vw",
               height: "2vw",
               borderRadius: "50%",
@@ -187,12 +192,12 @@ export default function Team() {
         </Box>
 
         {/* Círculos interactivos */}
-        <Box sx={{ position: "relative", width: "100%", height: "100%" }}>
-          <InteractiveCircle color="#febd3b" text="Benefactores" link="/link1" size="5.5vw" position={{ top: { xs: "25%", sm: "25%", md: "5%" }, left: "25%" }} />
-          <InteractiveCircle color="#350076" text="Colaboradores" link="/link2" size="8vw" position={{ top: { xs: "15%", sm: "10%", md: "-25%" }, left: "50%" }} />
-          <InteractiveCircle color="#9663d6b6" text="Voluntarios" link="/link3" size="6vw" position={{ top: { xs: "30%", sm: "30%", md: "8%" }, left: "75%" }} />
-          <InteractiveCircle color="#217954" text="Socios" link="/link4" size="7vw" position={{ top: { xs: "70%", sm: "75%", md: "70%" }, left: "20%" }} />
-          <InteractiveCircle color="#02cdb8" text="Patrocinador" link="/link5" size="7.5vw" position={{ top: { xs: "60%", sm: "65%", md: "60%" }, left: "70%" }} />
+        <Box sx={{ position: "relative", width: "100%", height: "100%", }}>
+          <InteractiveCircle color={COLORS.yellow200} text="Benefactores" link="/link1" size="5.5vw" position={{ top: { xs: "25%", sm: "25%", md: "5%" }, left: "25%" }} />
+          <InteractiveCircle color={COLORS.purple300} text="Colaboradores" link="/link2" size="8vw" position={{ top: { xs: "15%", sm: "10%", md: "-25%" }, left: "50%" }} />
+          <InteractiveCircle color={COLORS.purple200} text="Voluntarios" link="/link3" size="6vw" position={{ top: { xs: "30%", sm: "30%", md: "8%" }, left: "75%" }} />
+          <InteractiveCircle color={COLORS.green300} text="Socios" link="/link4" size="7vw" position={{ top: { xs: "70%", sm: "75%", md: "70%" }, left: "20%" }} />
+          <InteractiveCircle color={COLORS.green200} text="Patrocinador" link="/link5" size="7.5vw" position={{ top: { xs: "60%", sm: "65%", md: "60%" }, left: "70%" }} />
         </Box>
 
         {/* Botón Únete */}
@@ -203,18 +208,18 @@ export default function Team() {
             sx={{
               padding: "0.5vw 1.5vw",
               top: "6%",
-              borderColor: COLORS.primary,
+              borderColor: COLORS.green300,
               borderRadius: "30px",
-              color: COLORS.primary,
+              color: COLORS.green300,
               fontSize: SIZES.fontSizeLarge,
               textDecoration: "none",
               transition: "background 0.3s, color 0.3s",
               "&:hover": {
-                backgroundColor: COLORS.primary,
-                color: "#fff",
+                backgroundColor: COLORS.green300,
+                color: COLORS.white,
                 "& .icon-circle": {
-                  backgroundColor: "#fff",
-                  color: COLORS.primary,
+                  backgroundColor: COLORS.white,
+                  color: COLORS.green300,
                 },
               },
             }}
@@ -225,8 +230,8 @@ export default function Team() {
               sx={{
                 marginLeft: "0.5rem",
                 padding: "0.3rem",
-                color: "#fff",
-                background: COLORS.primary,
+                color: COLORS.white,
+                background: COLORS.green300,
                 borderRadius: "50%",
                 fontSize: SIZES.iconFontSize,
               }}
