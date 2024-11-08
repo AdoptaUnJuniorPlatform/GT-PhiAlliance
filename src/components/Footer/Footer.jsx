@@ -1,7 +1,7 @@
 import React from "react";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import TwitterIcon from "@mui/icons-material/X";
 import Section from "../Section/Section";
 import logo from "../../assets/images/Logo Phi-Footer.png";
 import { Box, IconButton, Link } from "@mui/material";
