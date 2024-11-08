@@ -8,7 +8,9 @@ import { Box, IconButton, Link } from "@mui/material";
 
 export default function Footer() {
   return (
+    
     <Section>
+      {/*Seccion footer */}
       <Box
         component="footer"
         sx={{
