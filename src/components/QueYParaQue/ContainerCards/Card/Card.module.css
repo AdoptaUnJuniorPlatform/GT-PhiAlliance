@@ -17,9 +17,24 @@
     z-index: 1;
 }
 
+.cardMaxWidthDiv {
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+    font-size: 26px;
+    height: 100%;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
 .cardBlue {
     background-color: #6BC3C1;
     color: black;
+    
 }
 
 .cardPurple {
