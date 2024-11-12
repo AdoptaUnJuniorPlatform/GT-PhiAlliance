@@ -1,0 +1,77 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 50px;
+    width: 500px;
+    height: 525px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 24px;
+    animation: fadeIn 1s forwards;
+}
+
+.cardMaxWidth {
+    position: absolute;
+    width: 100%;
+    animation: fadeOut 0.5s forwards;
+    z-index: 1;
+}
+
+.cardMaxWidthDiv {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    font-size: 26px;
+    height: 100%;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.cardBlue {
+    background-color: #6BC3C1;
+    color: black;
+    
+}
+
+.cardPurple {
+    background-color: #5B4B8A;
+    color: white;
+}
+
+.cardYellow {
+    background-color: #F3B63A;
+    color: black;
+}
+
+span {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    font-size: 6rem;
+    vertical-align: middle;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;  
+    }
+    100% {
+        opacity: 1;  
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;  
+    }
+    100% {
+        opacity: 1;  
+    }
+}
