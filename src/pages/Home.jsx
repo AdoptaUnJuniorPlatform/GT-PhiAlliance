@@ -7,15 +7,15 @@ import QueYParaQue from "../components/QueYParaQue/QueYParaQue";
 import Team from "../components/Team/Team";
 
 export default function HomePage() {
-    return (
-        <>
-            <Header />
-            <Home />
-            <QueYParaQue />
-            <Projects />
-            <Team />
-            <FollowUs />
-            <Footer />
-        </>
-    )
+  return (
+    <>
+      <Header />
+      <Home />
+      <QueYParaQue />
+      <Projects />
+      <Team />
+      <FollowUs />
+      <Footer />
+    </>
+  );
 }
