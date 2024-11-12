@@ -8,6 +8,8 @@
     height: 525px;
     font-weight: bold;
     text-align: left;
+    font-size: 24px;
+    animation: fadeIn 1s forwards;
 }
 
 .cardMaxWidth {
@@ -19,7 +21,7 @@
 
 .cardMaxWidthDiv {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     gap: 10rem;
     font-size: 26px;
     height: 100%;
@@ -28,7 +30,8 @@
 .cardContent {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    justify-content: space-around;
+    height: 100%;
 }
 
 .cardBlue {
@@ -55,12 +58,20 @@ span {
     vertical-align: middle;
 }
 
-/* Definición de la animación de desvanecerse hacia fuera */
 @keyframes fadeOut {
     0% {
-        opacity: 0;  /* Comienza completamente visible */
+        opacity: 0;  
     }
     100% {
-        opacity: 1;  /* Se desvanece hacia invisible */
+        opacity: 1;  
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;  
+    }
+    100% {
+        opacity: 1;  
     }
 }
