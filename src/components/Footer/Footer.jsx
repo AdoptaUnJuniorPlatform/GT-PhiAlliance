@@ -1,4 +1,3 @@
-import React from "react";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/X";
@@ -8,7 +7,6 @@ import { Box, IconButton, Link } from "@mui/material";
 
 export default function Footer() {
   return (
-    
     <Section>
       {/*Seccion footer */}
       <Box
@@ -17,9 +15,8 @@ export default function Footer() {
           display: "grid",
           gridTemplateColumns: { xs: "1fr 1fr", md: "1fr 2fr 1fr" },
           alignItems: "center",
-          padding: "1rem",
-          width: "85vw",
-          margin: "0 auto",
+          padding: "2rem 4rem",
+          width: "100%",
           boxSizing: "border-box",
           gap: { xs: "1rem", md: "0" },
         }}
@@ -282,4 +279,3 @@ export default function Footer() {
     </Section>
   );
 }
-

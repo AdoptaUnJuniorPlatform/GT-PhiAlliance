@@ -9,16 +9,21 @@ export default function Projects() {
       <Box
         component="section"
         id="home"
-        sx={{ pt: 12, pb: 8, padding: "2rem 8rem 2rem 8rem" }}
+        sx={{ padding: "2rem 4rem", width: "100%" }}
       >
-        <Container maxWidth="xxl" disableGutters sx={{ display: "flex" }}>
+        <Container
+          maxWidth="xxl"
+          disableGutters
+          sx={{ display: "flex", justifyContent: "space-between" }}
+        >
           <Box
+            id="box"
             flexDirection={{ xs: "column", lg: "row" }}
             sx={{
-              height: "100%",
               display: "flex",
               alignItems: "center",
-              justifyContent: "space-evenly",
+              justifyContent: "space-between",
+              width: "100%",
             }}
           >
             <Box

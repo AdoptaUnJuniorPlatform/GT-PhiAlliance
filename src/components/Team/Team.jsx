@@ -1,7 +1,7 @@
 import React from "react";
 import Section from "../Section/Section";
-import { Box, Typography, Button, colors } from '@mui/material';
-import NorthEastIcon from '@mui/icons-material/NorthEast';
+import { Box, Typography, Button, colors } from "@mui/material";
+import NorthEastIcon from "@mui/icons-material/NorthEast";
 import GalaxyImg from "../../assets/images/Galaxy.png";
 
 // Variables de estilo
@@ -50,12 +50,20 @@ const InteractiveCircle = ({ color, text, link, size, position }) => (
       transition: "transform 0.3s ease",
       "&:hover": {
         transform: "scale(1.2)",
-        
-        "& .hover-text": { display: "block", color:COLORS.white },
+
+        "& .hover-text": { display: "block", color: COLORS.white },
       },
     }}
   >
-    <Typography className="hover-text" sx={{ display: "none", overflow: "hidden", textOverflow: "ellipsis", width: "100%" }}>
+    <Typography
+      className="hover-text"
+      sx={{
+        display: "none",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        width: "100%",
+      }}
+    >
       {text}
     </Typography>
   </Box>
@@ -76,7 +84,7 @@ export default function Team() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          padding: { xs: "2rem 1rem", md: "2rem 8rem" },
+          padding: { xs: "2rem 1rem", md: "2rem 4rem" },
           "&::before": {
             content: '""',
             position: "absolute",
@@ -92,10 +100,26 @@ export default function Team() {
           },
         }}
       >
-        <Typography variant="h1" sx={{ fontSize: { xs: "5vw", md: "3vw" }, color: COLORS.green300, mb: "0.5vw", textAlign: "left" }}>
+        <Typography
+          variant="h1"
+          sx={{
+            fontSize: { xs: "5vw", md: "3vw" },
+            color: COLORS.green300,
+            mb: "0.5vw",
+            textAlign: "left",
+          }}
+        >
           Comunidad PHI
         </Typography>
-        <Typography variant="h6" sx={{ fontSize: { xs: "3vw", md: "1.2vw" }, color: COLORS.grey, mb: "1vw", textAlign: "left" }}>
+        <Typography
+          variant="h6"
+          sx={{
+            fontSize: { xs: "3vw", md: "1.2vw" },
+            color: COLORS.grey,
+            mb: "1vw",
+            textAlign: "left",
+          }}
+        >
           Lorem ipsum dolor sit amet consectetur. Id at elementum
         </Typography>
 
@@ -188,16 +212,48 @@ export default function Team() {
               right: "-2%",
             }}
           />
-        
         </Box>
 
         {/* Círculos interactivos */}
-        <Box sx={{ position: "relative", width: "100%", height: "100%", }}>
-          <InteractiveCircle color={COLORS.yellow200} text="Benefactores" link="/link1" size="5.5vw" position={{ top: { xs: "25%", sm: "25%", md: "5%" }, left: "25%" }} />
-          <InteractiveCircle color={COLORS.purple300} text="Colaboradores" link="/link2" size="8vw" position={{ top: { xs: "15%", sm: "10%", md: "-25%" }, left: "50%" }} />
-          <InteractiveCircle color={COLORS.purple200} text="Voluntarios" link="/link3" size="6vw" position={{ top: { xs: "30%", sm: "30%", md: "8%" }, left: "75%" }} />
-          <InteractiveCircle color={COLORS.green300} text="Socios" link="/link4" size="7vw" position={{ top: { xs: "70%", sm: "75%", md: "70%" }, left: "20%" }} />
-          <InteractiveCircle color={COLORS.green200} text="Patrocinador" link="/link5" size="7.5vw" position={{ top: { xs: "60%", sm: "65%", md: "60%" }, left: "70%" }} />
+        <Box sx={{ position: "relative", width: "100%", height: "100%" }}>
+          <InteractiveCircle
+            color={COLORS.yellow200}
+            text="Benefactores"
+            link="/link1"
+            size="5.5vw"
+            position={{ top: { xs: "25%", sm: "25%", md: "5%" }, left: "25%" }}
+          />
+          <InteractiveCircle
+            color={COLORS.purple300}
+            text="Colaboradores"
+            link="/link2"
+            size="8vw"
+            position={{
+              top: { xs: "15%", sm: "10%", md: "-25%" },
+              left: "50%",
+            }}
+          />
+          <InteractiveCircle
+            color={COLORS.purple200}
+            text="Voluntarios"
+            link="/link3"
+            size="6vw"
+            position={{ top: { xs: "30%", sm: "30%", md: "8%" }, left: "75%" }}
+          />
+          <InteractiveCircle
+            color={COLORS.green300}
+            text="Socios"
+            link="/link4"
+            size="7vw"
+            position={{ top: { xs: "70%", sm: "75%", md: "70%" }, left: "20%" }}
+          />
+          <InteractiveCircle
+            color={COLORS.green200}
+            text="Patrocinador"
+            link="/link5"
+            size="7.5vw"
+            position={{ top: { xs: "60%", sm: "65%", md: "60%" }, left: "70%" }}
+          />
         </Box>
 
         {/* Botón Únete */}
@@ -242,6 +298,3 @@ export default function Team() {
     </Section>
   );
 }
-
-
-
