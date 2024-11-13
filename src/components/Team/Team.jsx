@@ -203,7 +203,7 @@ export default function Team() {
         {/* Botón Únete */}
         <Box sx={{ marginTop: "auto", textAlign: "center", py: 3 }}>
           <Button
-            href="/join"
+            href="/comunidad"
             variant="outlined"
             sx={{
               padding: "0.5vw 1.5vw",
