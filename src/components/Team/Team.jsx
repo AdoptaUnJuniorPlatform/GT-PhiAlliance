@@ -3,6 +3,7 @@ import Section from "../Section/Section";
 import { Box, Typography, Button, colors } from '@mui/material';
 import NorthEastIcon from '@mui/icons-material/NorthEast';
 import GalaxyImg from "../../assets/images/Galaxy.png";
+import { Link } from "react-router-dom";
 
 // Variables de estilo
 const COLORS = {
@@ -202,41 +203,43 @@ export default function Team() {
 
         {/* Botón Únete */}
         <Box sx={{ marginTop: "auto", textAlign: "center", py: 3 }}>
-          <Button
-            href="/comunidad"
-            variant="outlined"
-            sx={{
-              padding: "0.5vw 1.5vw",
-              top: "6%",
-              borderColor: COLORS.green300,
-              borderRadius: "30px",
-              color: COLORS.green300,
-              fontSize: SIZES.fontSizeLarge,
-              textDecoration: "none",
-              transition: "background 0.3s, color 0.3s",
-              "&:hover": {
-                backgroundColor: COLORS.green300,
-                color: COLORS.white,
-                "& .icon-circle": {
-                  backgroundColor: COLORS.white,
-                  color: COLORS.green300,
-                },
-              },
-            }}
-          >
-            Únete
-            <NorthEastIcon
-              className="icon-circle"
+          <Link to="/comunidad">
+            <Button
+              href="/comunidad"
+              variant="outlined"
               sx={{
-                marginLeft: "0.5rem",
-                padding: "0.3rem",
-                color: COLORS.white,
-                background: COLORS.green300,
-                borderRadius: "50%",
-                fontSize: SIZES.iconFontSize,
+                padding: "0.5vw 1.5vw",
+                top: "6%",
+                borderColor: COLORS.green300,
+                borderRadius: "30px",
+                color: COLORS.green300,
+                fontSize: SIZES.fontSizeLarge,
+                textDecoration: "none",
+                transition: "background 0.3s, color 0.3s",
+                "&:hover": {
+                  backgroundColor: COLORS.green300,
+                  color: COLORS.white,
+                  "& .icon-circle": {
+                    backgroundColor: COLORS.white,
+                    color: COLORS.green300,
+                  },
+                },
               }}
-            />
-          </Button>
+            >
+              Únete
+              <NorthEastIcon
+                className="icon-circle"
+                sx={{
+                  marginLeft: "0.5rem",
+                  padding: "0.3rem",
+                  color: COLORS.white,
+                  background: COLORS.green300,
+                  borderRadius: "50%",
+                  fontSize: SIZES.iconFontSize,
+                }}
+              />
+            </Button>
+          </Link>
         </Box>
       </Box>
     </Section>
