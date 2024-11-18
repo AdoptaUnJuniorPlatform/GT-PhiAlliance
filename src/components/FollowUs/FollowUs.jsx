@@ -1,6 +1,14 @@
 import React from "react";
 import Section from "../Section/Section";
-import { Box, Typography, Card, CardMedia, CardContent, CardActions, Button } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Card,
+  CardMedia,
+  CardContent,
+  CardActions,
+  Button,
+} from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 import Image1 from "../../assets/images/Imagen tarjeta blog 1.webp";
@@ -13,19 +21,22 @@ export default function FollowUs() {
     {
       image: Image1,
       title: "Lorem ipsum dolor sit amet...",
-      description: "Lorem ipsum dolor sit amet consectetur. Etiam nunc molestie mi id.",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Etiam nunc molestie mi id.",
       link: "#",
     },
     {
       image: Image2,
       title: "Lorem ipsum dolor sit amet...",
-      description: "Lorem ipsum dolor sit amet consectetur. Etiam nunc molestie mi id.",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Etiam nunc molestie mi id.",
       link: "#",
     },
     {
       image: Image3,
       title: "Lorem ipsum dolor sit amet...",
-      description: "Lorem ipsum dolor sit amet consectetur. Etiam nunc molestie mi id.",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Etiam nunc molestie mi id.",
       link: "#",
     },
   ];
@@ -43,11 +54,14 @@ export default function FollowUs() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          padding: { xs: "2rem 1rem", md: "3rem 8rem" },
+          padding: { xs: "2rem 1rem", md: "2rem 4rem" },
         }}
       >
         {/* Título de la Sección */}
-        <Typography variant="h4" sx={{ fontSize: "2.5rem", mb: 3, textAlign: "left" }}>
+        <Typography
+          variant="h4"
+          sx={{ fontSize: "2.5rem", mb: 3, textAlign: "left" }}
+        >
           Síguenos
         </Typography>
 
@@ -70,16 +84,16 @@ export default function FollowUs() {
                 borderRadius: 4,
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
                 maxWidth: { xs: "100%", md: "30%" },
-                minWidth: 0, 
-                transition:"box-shadow 0.3s ease",
-                "&:hover":{
+                minWidth: 0,
+                transition: "box-shadow 0.3s ease",
+                "&:hover": {
                   boxShadow: "0 8px 16px rgba(96, 191, 186, 0.5)",
                 },
                 "&:hover .card-image": {
-                transform: "scale(1.04)", 
+                  transform: "scale(1.04)",
                 },
                 "&:hover .bounce-icon": {
-                animation: "bounce 0.6s ease-in-out", 
+                  animation: "bounce 0.6s ease-in-out",
                 },
               }}
             >
@@ -90,14 +104,16 @@ export default function FollowUs() {
                 height="300"
                 image={card.image}
                 alt={`Image ${index + 1}`}
-                sx={{ 
+                sx={{
                   borderRadius: "4px 4px 0 0",
                   transition: "transform 1s ease",
-                 }}
+                }}
               />
 
               {/* Contenido de la Tarjeta */}
-              <CardContent sx={{ backgroundColor: "#e0f7fa", textAlign: "left" }}>
+              <CardContent
+                sx={{ backgroundColor: "#e0f7fa", textAlign: "left" }}
+              >
                 <Typography variant="h6" sx={{ fontWeight: "bold", mb: 1 }}>
                   {card.title}
                 </Typography>
@@ -112,11 +128,16 @@ export default function FollowUs() {
                   size="small"
                   color="primary"
                   endIcon={
-                  <ArrowForwardIcon
-                  className="bounce-icon"
-                  sx={{fontSize:"1.5rem"}}
-                  />}
-                  sx={{ textTransform: "none", fontWeight: "bold", color: "#00695c" }}
+                    <ArrowForwardIcon
+                      className="bounce-icon"
+                      sx={{ fontSize: "1.5rem" }}
+                    />
+                  }
+                  sx={{
+                    textTransform: "none",
+                    fontWeight: "bold",
+                    color: "#00695c",
+                  }}
                   href={card.link}
                 >
                   Learn more
@@ -129,4 +150,3 @@ export default function FollowUs() {
     </Section>
   );
 }
-

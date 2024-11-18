@@ -10,13 +10,12 @@ export default function QueYParaQue() {
         disableGutters
         sx={{
           display: "flex",
-          padding: "2rem 8rem",
+          padding: "2rem 4rem",
           flexDirection: "column",
           alignItems: "flex-start",
           gap: "2rem",
         }}
       >
-
         <Box width="100%" mb={4} sx={{ textAlign: "left" }}>
           <Typography
             variant="h1"
