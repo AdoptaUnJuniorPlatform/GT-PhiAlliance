@@ -1,5 +1,4 @@
 import styles from "./Card.module.css";
-
 export default function Card({
   icon,
   title,
@@ -24,12 +23,15 @@ export default function Card({
 
   return size ? (
     <div className={getClassName()} onMouseEnter={handleSize}>
+      <div className={styles.circle}></div>
       <div className={styles.cardContent}>
         <div>{icon}</div>
         <span>{title}</span>
       </div>
+      <div className={styles.description}>
+        <p>{description}</p>
+      </div>
 
-      <p>{description}</p>
     </div>
   ) : (
     <div
@@ -37,6 +39,7 @@ export default function Card({
       onMouseLeave={handleSize}
     >
       <div className={styles.cardMaxWidthDiv}>
+        <div className={styles.circle}></div>
         <div className={styles.cardContent}>
           <div>{icon}</div>
           <span>{title}</span>

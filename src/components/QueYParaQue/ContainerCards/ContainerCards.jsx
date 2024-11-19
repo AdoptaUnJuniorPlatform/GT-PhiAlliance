@@ -6,7 +6,7 @@ import IAIcon from "../../Icons/IAIcon";
 import { useState } from "react";
 
 export default function ContainerCards() {
-  const [sizeBlue, setSizeBlue] = useState(true);
+  const [sizeBlue, setSizeBlue] = useState(false);
   const [sizePurple, setSizePurple] = useState(true);
   const [sizeYellow, setSizeYellow] = useState(true);
 
@@ -32,7 +32,7 @@ export default function ContainerCards() {
       sx={{ width: "100%" }}
     >
       <Card
-        description="Lorem ipsum dolor sit amet consectetur."
+        description={`Lorem ipsum dolor sit amet.\nConsectetur adipiscing elit.`} 
         fullDescripcion="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo"
         icon={<GalaxiaIcon />}
         title="Qué"
@@ -42,7 +42,7 @@ export default function ContainerCards() {
       />
       {/* Tarjeta morada con los eventos de mouse */}
       <Card
-        description="Lorem ipsum dolor sit amet consectetur."
+        description={`Lorem ipsum dolor sit amet.\nConsectetur adipiscing elit.`} 
         fullDescripcion="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo"
         icon={<EstrellasIcon />}
         title="Para Qué"
@@ -51,7 +51,7 @@ export default function ContainerCards() {
         size={sizePurple}
       />
       <Card
-        description="Lorem ipsum dolor sit amet consectetur."
+        description={`Lorem ipsum dolor sit amet.\nConsectetur adipiscing elit.`} 
         fullDescripcion="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo"
         icon={<IAIcon />}
         title="Cómo"
