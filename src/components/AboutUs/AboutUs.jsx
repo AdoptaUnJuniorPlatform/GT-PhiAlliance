@@ -2,7 +2,7 @@ import { Box, Container, Typography } from "@mui/material";
 import Section from "../Section/Section";
 import ContainerCards from "./ContainerCards/ContainerCards";
 
-export default function QueYParaQue() {
+export default function AboutUs() {
   return (
     <Section>
       <Container
