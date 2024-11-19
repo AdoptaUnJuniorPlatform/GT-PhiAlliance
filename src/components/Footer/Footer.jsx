@@ -15,8 +15,8 @@ export default function Footer() {
           display: "grid",
           gridTemplateColumns: { xs: "1fr 1fr", md: "1fr 2fr 1fr" },
           alignItems: "center",
-          padding: "2rem 4rem",
           width: "100%",
+          marginTop: "4rem",
           boxSizing: "border-box",
           gap: { xs: "1rem", md: "0" },
         }}

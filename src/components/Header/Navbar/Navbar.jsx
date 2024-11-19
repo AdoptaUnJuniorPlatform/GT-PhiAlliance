@@ -33,7 +33,7 @@ function ResponsiveAppBar() {
   return (
     <AppBar
       position="static"
-      sx={{ backgroundColor: "white", width: "100%", padding: "2rem 4rem" }}
+      sx={{ backgroundColor: "white", width: "100%" }}
       elevation={0}
     >
       <Toolbar disableGutters>

@@ -9,7 +9,7 @@ export default function Projects() {
       <Box
         component="section"
         id="home"
-        sx={{ padding: "2rem 4rem", width: "100%" }}
+        sx={{width: "100%", marginTop: "4rem" }}
       >
         <Container
           maxWidth="xxl"

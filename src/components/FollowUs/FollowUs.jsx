@@ -51,10 +51,10 @@ export default function FollowUs() {
           position: "relative",
           overflow: "hidden",
           width: "100%",
+          marginTop: "4rem",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          padding: { xs: "2rem 1rem", md: "2rem 4rem" },
         }}
       >
         {/* Título de la Sección */}

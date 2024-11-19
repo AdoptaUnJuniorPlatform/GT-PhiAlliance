@@ -10,7 +10,6 @@ export default function QueYParaQue() {
         disableGutters
         sx={{
           display: "flex",
-          padding: "2rem 4rem",
           flexDirection: "column",
           alignItems: "flex-start",
           gap: "2rem",
