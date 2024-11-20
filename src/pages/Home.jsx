@@ -1,11 +1,11 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import FollowUs from "../components/FollowUs/FollowUs";
 import Home from "../components/Home/Home";
 import Projects from "../components/Projects/Projects";
 import Team from "../components/Team/Team";
 import AboutUs from "../components/AboutUs/AboutUs";
-import Colaboradores from "../components/Colaboradores/Colaboradores"
+import Colaboradores from "../components/Colaboradores/Colaboradores";
 
 export default function HomePage() {
   // Crear referencias para cada sección
@@ -13,7 +13,6 @@ export default function HomePage() {
   const aboutUsRef = useRef(null);
   const projectsRef = useRef(null);
   const comunidadRef = useRef(null);
-  const teamRef = useRef(null);
   const followUsRef = useRef(null);
 
   // Obtener el estado de la navegación
@@ -53,6 +52,7 @@ export default function HomePage() {
       <div ref={projectsRef}>
         <Projects />
       </div>
+      <Colaboradores />
       <div ref={comunidadRef}>
         <Team />
       </div>

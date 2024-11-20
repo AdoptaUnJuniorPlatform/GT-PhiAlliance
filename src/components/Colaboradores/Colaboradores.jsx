@@ -9,9 +9,17 @@ import InnoITLogo from "../../assets/images/logo_innoit.webp";
 
 const logos = [
   { src: AujLogo, alt: "AdoptaUnJunior", link: "https://adoptaunjunior.org" },
-  { src: SustainableLogo, alt: "Sustainable Startup & Co", link: "https://sustainablestartup.com" },
+  {
+    src: SustainableLogo,
+    alt: "Sustainable Startup & Co",
+    link: "https://sustainablestartup.com",
+  },
   { src: ExvolutionLogo, alt: "Exvolution", link: "https://exvolution.com" },
-  { src: OrangeFundacionLogo, alt: "Orange Fundación", link: "https://orangefoundation.com" },
+  {
+    src: OrangeFundacionLogo,
+    alt: "Orange Fundación",
+    link: "https://orangefoundation.com",
+  },
   { src: InnoITLogo, alt: "InnoIT", link: "https://innoit.com" },
 ];
 
@@ -23,14 +31,14 @@ export default function ColaboradoresCarousel() {
     if (!carouselRef.current) return;
 
     scrollInterval.current = setInterval(() => {
-      carouselRef.current.scrollLeft += 2; 
+      carouselRef.current.scrollLeft += 2;
 
       // Reinicio del scroll infinito
       const scrollWidth = carouselRef.current.scrollWidth;
       const clientWidth = carouselRef.current.clientWidth;
 
       if (carouselRef.current.scrollLeft >= scrollWidth - clientWidth) {
-        carouselRef.current.scrollLeft = 0; 
+        carouselRef.current.scrollLeft = 0;
       }
     }, 10);
   };
@@ -52,9 +60,9 @@ export default function ColaboradoresCarousel() {
         overflow: "hidden",
         position: "relative",
         py: 4,
-        backgroundColor: "#f9f9f9",
+        backgroundColor: "white",
       }}
-      onMouseEnter={stopAutoScroll} 
+      onMouseEnter={stopAutoScroll}
       onMouseLeave={startAutoScroll}
     >
       <Typography
@@ -87,7 +95,11 @@ export default function ColaboradoresCarousel() {
             href={logo.link}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
           >
             <Box
               component="img"
@@ -106,4 +118,3 @@ export default function ColaboradoresCarousel() {
     </Box>
   );
 }
-
