@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Box, Typography, Button, IconButton, List, ListItem, ListItemText, Collapse } from "@mui/material";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import GalaxyImg from "../assets/images/comunidad phi  universo vector.svg";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
 import Estrellas from "../assets/images/Icono estrellas vector.svg";
 
 // Definición de colores y tamaños
@@ -54,10 +52,7 @@ export default function Comunidad() {
   };
 
   return (
-    <>
-      <Header />
-      
-      <Box sx={{ width: "100%",  padding: { xs: "2rem", md: "4rem" } }}>
+      <Box sx={{ width: "100%",  padding: { xs: "2rem", md: "4rem" }, marginTop: "4rem" }}>
         {/* Sección Superior */}
         <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 4 }}>
           {/* Columna Izquierda (Imagen) */}
@@ -182,8 +177,5 @@ export default function Comunidad() {
           </Box>
         </Box>
       </Box>
-
-      <Footer />
-    </>
   );
 }

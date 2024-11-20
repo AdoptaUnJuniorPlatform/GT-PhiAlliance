@@ -50,7 +50,7 @@ function ResponsiveAppBar() {
             display: "inline-block",
             cursor: "pointer",
           }}
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={() => window.scrollTo("Home",{behavior: "smooth" })}
         >
           <LogoIcon />
         </Box>
