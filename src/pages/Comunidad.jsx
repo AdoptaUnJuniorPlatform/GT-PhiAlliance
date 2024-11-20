@@ -47,6 +47,8 @@ const listData = [
 export default function Comunidad() {
   const [expanded, setExpanded] = useState(null);
 
+
+
   const toggleExpand = (index) => {
     setExpanded(expanded === index ? null : index);
   };

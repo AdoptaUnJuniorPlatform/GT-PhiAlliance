@@ -10,14 +10,14 @@ import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Header />
       <Router>
+        <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/comunidad" element={<Comunidad />} /> {/* Nueva ruta para Comunidad */}
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </ThemeProvider>
   );
 }
