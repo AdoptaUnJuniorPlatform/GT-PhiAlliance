@@ -7,20 +7,26 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { useState } from "react";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LogoIcon from "../../Icons/LogoIcon";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const pages = [
-  "Home",
-  "Qué, cómo y por qué",
-  "Comunidad",
-  "Proyectos",
-  "Síguenos",
+  { label: "Home", section: "home" },
+  { label: "Qué, cómo y por qué", section: "aboutUs" },
+  { label: "Comunidad", section: "comunidad" },
+  { label: "Proyectos", section: "projects" },
+  { label: "Síguenos", section: "followUs" },
 ];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
+  const navigate = useNavigate();
+
+  const handleNavigateToSection = (section) => {
+    navigate("/", { state: { section } }); // Navegamos al HomePage con la sección especificada
+  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -32,30 +38,31 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar
-    position="fixed"
-    top={0}
-    sx={{
-      backgroundColor: "white",
-      width: "100%",
-      paddingLeft: "4rem",
-      paddingRight: "4rem",
-      paddingTop: "1rem",
-    }}
-    elevation={0}
-  >
+      position="fixed"
+      top={0}
+      sx={{
+        backgroundColor: "white",
+        width: "100%",
+        paddingLeft: "4rem",
+        paddingRight: "4rem",
+        paddingTop: "1rem",
+      }}
+      elevation={0}
+    >
       <Toolbar disableGutters>
+        {/* Logo que navega al inicio */}
         <Box
           component={"section"}
           sx={{
             display: "inline-block",
             cursor: "pointer",
           }}
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={() => handleNavigateToSection("home")}
         >
           <LogoIcon />
         </Box>
 
-        {/* Contenedor del menú móvil */}
+        {/* Menú móvil */}
         <Box
           sx={{
             flexGrow: 1,
@@ -96,14 +103,20 @@ function ResponsiveAppBar() {
             sx={{ display: { xs: "block", md: "none" } }}
           >
             {pages.map((page) => (
-              <MenuItem key={page} onClick={handleCloseNavMenu}>
-                <Typography sx={{ textAlign: "center" }}>{page}</Typography>
+              <MenuItem
+                key={page.label}
+                onClick={() => {
+                  handleCloseNavMenu();
+                  handleNavigateToSection(page.section); // Navegar a la sección específica
+                }}
+              >
+                <Typography sx={{ textAlign: "center" }}>{page.label}</Typography>
               </MenuItem>
             ))}
           </Menu>
         </Box>
 
-        {/* Contenedor de botones para pantallas más grandes */}
+        {/* Menú para pantallas grandes */}
         <Box
           sx={{
             flexGrow: 1,
@@ -115,9 +128,9 @@ function ResponsiveAppBar() {
         >
           {pages.map((page) => (
             <Button
-              key={page}
+              key={page.label}
               variant="outlined"
-              href={`#${page}`}
+              onClick={() => handleNavigateToSection(page.section)} // Navegar a la sección específica
               sx={{
                 color: "black",
                 borderRadius: "25px",
@@ -128,10 +141,12 @@ function ResponsiveAppBar() {
                 padding: ".2rem 2rem",
               }}
             >
-              {page}
+              {page.label}
             </Button>
           ))}
         </Box>
+
+        {/* Botón de contacto */}
         <Box
           sx={{
             flexGrow: 1,
@@ -153,7 +168,7 @@ function ResponsiveAppBar() {
               height: "4rem",
             }}
           >
-            Contactanos
+            Contáctanos
             <WhatsAppIcon />
           </Button>
         </Box>

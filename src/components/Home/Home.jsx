@@ -1,4 +1,4 @@
-import { Box, Button, Container,Typography } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 import Section from "../Section/Section";
 import LogoHome from "../../assets/images/logo-home.png";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
@@ -12,7 +12,7 @@ export default function Home() {
         sx={{ pt: 12, pb: 8}}
       >
         <Container maxWidth="xxl" disableGutters sx={{ display: "flex" }}>
-          <Box display="flex" flexDirection={{ xs: "column", lg: "row" }}>
+          <Box display="flex" flexDirection={{ xs: "column", lg: "row", marginTop: "2rem" }}>
             <Box
               flex={1}
               mb={{ xs: 4, lg: 0 }}
