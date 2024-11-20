@@ -7,14 +7,26 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { useState } from "react";
-import PhiAllianceIco from "../../../assets/phi-alliance.png";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import LogoIcon from "../../Icons/LogoIcon";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const pages = ["Home", "Qué, cómo y por qué", "Comunidad", "Proyectos", "Síguenos"]; 
+const pages = [
+  { label: "Home", section: "home" },
+  { label: "Qué, cómo y por qué", section: "aboutUs" },
+  { label: "Comunidad", section: "comunidad" },
+  { label: "Proyectos", section: "projects" },
+  { label: "Síguenos", section: "followUs" },
+];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
+  const navigate = useNavigate();
+
+  const handleNavigateToSection = (section) => {
+    navigate("/", { state: { section } }); // Navegamos al HomePage con la sección especificada
+  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -25,133 +37,143 @@ function ResponsiveAppBar() {
   };
 
   return (
-      <AppBar
-        position="static"
-        sx={{ backgroundColor: "white", width: "100%", padding: "1rem 8rem" }} 
-        elevation={0}
-      >
-        <Toolbar disableGutters>
-          <Box
-            component={"section"}
+    <AppBar
+      position="fixed"
+      top={0}
+      sx={{
+        backgroundColor: "white",
+        width: "100%",
+        paddingLeft: "4rem",
+        paddingRight: "4rem",
+        paddingTop: "1rem",
+      }}
+      elevation={0}
+    >
+      <Toolbar disableGutters>
+        {/* Logo que navega al inicio */}
+        <Box
+          component={"section"}
+          sx={{
+            display: "inline-block",
+            cursor: "pointer",
+          }}
+          onClick={() => handleNavigateToSection("home")}
+        >
+          <LogoIcon />
+        </Box>
+
+        {/* Menú móvil */}
+        <Box
+          sx={{
+            flexGrow: 1,
+            display: { xs: "flex", md: "none" },
+            justifyContent: "end",
+            alignItems: "center",
+            color: "#5BC7C0",
+          }}
+        >
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleOpenNavMenu}
+            color="inherit"
             sx={{
-              display: "inline-block",
+              border: "1px solid #5BC7C0",
             }}
           >
-            <img
-              src={PhiAllianceIco}
-              alt="Phi Alliance"
-              width="100px"
-              height="100px"
-              style={{
-                verticalAlign: "bottom",
-                borderRadius: "15px",
-              }}
-            />
-          </Box>
+            <MenuIcon />
+          </IconButton>
 
-          {/* Contenedor del menú móvil */}
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "flex", md: "none" },
-              justifyContent: "end",
-              alignItems: "center",
-              color: "#5BC7C0",
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "left",
             }}
-          >
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-              sx={{
-                border: "1px solid #5BC7C0",
-              }}
-            >
-              <MenuIcon />
-            </IconButton>
-
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{ display: { xs: "block", md: "none" } }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: "center" }}>{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-
-          {/* Contenedor de botones para pantallas más grandes */}
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              justifyContent: "end",
-              alignItems: "center",
-              gap: "1rem",
+            keepMounted
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "left",
             }}
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
+            sx={{ display: { xs: "block", md: "none" } }}
           >
             {pages.map((page) => (
-              <Button
-                key={page}
-                variant="outlined"
-                sx={{
-                  color: "black",
-                  borderRadius: "25px",
-                  borderColor: "#CCCCCC",
-                  fontFamily: "Poppins, sans-serif",
-                  fontSize: "1.5rem",
-                  textTransform: "none",
-                  padding: ".2rem 2rem",
+              <MenuItem
+                key={page.label}
+                onClick={() => {
+                  handleCloseNavMenu();
+                  handleNavigateToSection(page.section); // Navegar a la sección específica
                 }}
               >
-                {page}
-              </Button>
+                <Typography sx={{ textAlign: "center" }}>{page.label}</Typography>
+              </MenuItem>
             ))}
-          </Box>
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              justifyContent: "end",
-              alignItems: "center",
-            }}
-          >
+          </Menu>
+        </Box>
+
+        {/* Menú para pantallas grandes */}
+        <Box
+          sx={{
+            flexGrow: 1,
+            display: { xs: "none", md: "flex" },
+            justifyContent: "end",
+            alignItems: "center",
+            gap: "1rem",
+          }}
+        >
+          {pages.map((page) => (
             <Button
+              key={page.label}
               variant="outlined"
+              onClick={() => handleNavigateToSection(page.section)} // Navegar a la sección específica
               sx={{
-                color: "green",
+                color: "black",
                 borderRadius: "25px",
-                borderColor: "green",
+                borderColor: "#CCCCCC",
                 fontFamily: "Poppins, sans-serif",
-                textTransform: "none",
                 fontSize: "1.5rem",
-                gap: "5px",
-                height: "4rem",
+                textTransform: "none",
+                padding: ".2rem 2rem",
               }}
             >
-              Contactanos
-              <WhatsAppIcon />
+              {page.label}
             </Button>
-          </Box>
-        </Toolbar>
-      </AppBar>
+          ))}
+        </Box>
+
+        {/* Botón de contacto */}
+        <Box
+          sx={{
+            flexGrow: 1,
+            display: { xs: "none", md: "flex" },
+            justifyContent: "end",
+            alignItems: "center",
+          }}
+        >
+          <Button
+            variant="outlined"
+            sx={{
+              color: "green",
+              borderRadius: "25px",
+              borderColor: "green",
+              fontFamily: "Poppins, sans-serif",
+              textTransform: "none",
+              fontSize: "1.5rem",
+              gap: "5px",
+              height: "4rem",
+            }}
+          >
+            Contáctanos
+            <WhatsAppIcon />
+          </Button>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 }
 

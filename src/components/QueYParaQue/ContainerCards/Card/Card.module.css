@@ -1,0 +1,143 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 50px;
+  width: 550px;
+  height: 575px;
+  text-align: left;
+  font-size: 24px;
+  animation: fadeIn 1s forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardBlue {
+  background-color: #6bc3c1;
+  color: black;
+
+  .circle {
+    position: absolute;
+    width: 825px;
+    height: 825px;
+    border-radius: 50%;
+    background: transparent;
+    border: 5px solid white;
+    top: -220px;
+    left: -240px;
+    z-index: 0;
+  }
+}
+
+.cardPurple {
+  background-color: #5b4b8a;
+  color: white;
+
+  .circle {
+    position: absolute;
+    width: 1100px;
+    height: 1100px;
+    border-radius: 50%;
+    background: transparent;
+    border: 5px solid white;
+    top: -70px;
+    right: -25px;
+    z-index: 0;
+  }
+}
+
+.cardYellow {
+  background-color: #f3b63a;
+  color: black;
+
+  .circle {
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+    background: transparent;
+    border: 5px solid white;
+    top: -250px;
+    right: -390px;
+    z-index: 0;
+  }
+}
+
+.cardMaxWidth {
+  position: absolute;
+  width: 100%;
+  animation: fadeOut 0.5s forwards;
+  z-index: 1;
+}
+
+.cardMaxWidthDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7rem;
+  font-size: 26px;
+  height: 100%;
+
+  .circle {
+    position: absolute;
+    width: 700px;
+    height: 800px;
+    border-radius: 50%;
+    background: transparent;
+    border: 5px solid white;
+    top: -100px;
+    left: -330px;
+    z-index: 0;
+  }
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+span {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  font-size: 6rem;
+  vertical-align: middle;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .card {
+    width: 400px;
+    height: 425px;
+    font-size: 12px;
+  }
+
+  .description {
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+}
