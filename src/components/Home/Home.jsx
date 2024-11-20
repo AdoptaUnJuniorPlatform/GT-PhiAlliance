@@ -8,7 +8,7 @@ export default function Home() {
     <Section>
       <Box
         component="section"
-        id="home"
+        id="Home"
         sx={{ pt: 12, pb: 8}}
       >
         <Container maxWidth="xxl" disableGutters sx={{ display: "flex" }}>

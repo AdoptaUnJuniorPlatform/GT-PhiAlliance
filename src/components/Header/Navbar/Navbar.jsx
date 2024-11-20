@@ -32,16 +32,25 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar
-      position="static"
-      sx={{ backgroundColor: "white", width: "100%" }}
-      elevation={0}
-    >
+    position="fixed"
+    top={0}
+    sx={{
+      backgroundColor: "white",
+      width: "100%",
+      paddingLeft: "4rem",
+      paddingRight: "4rem",
+      paddingTop: "1rem",
+    }}
+    elevation={0}
+  >
       <Toolbar disableGutters>
         <Box
           component={"section"}
           sx={{
             display: "inline-block",
+            cursor: "pointer",
           }}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <LogoIcon />
         </Box>
@@ -108,6 +117,7 @@ function ResponsiveAppBar() {
             <Button
               key={page}
               variant="outlined"
+              href={`#${page}`}
               sx={{
                 color: "black",
                 borderRadius: "25px",

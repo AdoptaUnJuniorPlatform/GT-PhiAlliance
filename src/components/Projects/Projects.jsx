@@ -8,7 +8,7 @@ export default function Projects() {
     <Section>
       <Box
         component="section"
-        id="home"
+        id="Proyectos"
         sx={{width: "100%", marginTop: "4rem" }}
       >
         <Container

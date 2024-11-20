@@ -30,6 +30,7 @@ const InteractiveCircle = ({ color, text, link, size, position, isActive }) => (
   <Box
     component="a"
     href={link}
+    id="Comunidad"
     sx={{
       backgroundColor: color,
       width: size,

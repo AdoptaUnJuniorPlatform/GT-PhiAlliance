@@ -8,6 +8,7 @@ export default function AboutUs() {
       <Container
         maxWidth="xxl"
         disableGutters
+        id="Qué, cómo y por qué"
         sx={{
           display: "flex",
           flexDirection: "column",

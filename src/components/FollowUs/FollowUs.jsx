@@ -45,7 +45,7 @@ export default function FollowUs() {
     <Section>
       <Box
         component="section"
-        id="comunidad"
+        id="Síguenos"
         sx={{
           textAlign: "center",
           position: "relative",
