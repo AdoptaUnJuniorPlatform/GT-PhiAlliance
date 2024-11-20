@@ -33,7 +33,7 @@ export default function ContainerCards() {
       sx={{ width: "100%" }}
     >
       <Card
-        description="Lorem ipsum dolor sit amet consectetur."
+        description="Lorem ipsum dolor sit amet consectetur. "
         fullDescripcion={aboutUs.cards[0].content}
         icon={<GalaxiaIcon />}
         title={aboutUs.cards[0].title}
