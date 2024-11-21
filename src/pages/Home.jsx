@@ -4,8 +4,8 @@ import FollowUs from "../components/FollowUs/FollowUs";
 import Home from "../components/Home/Home";
 import Projects from "../components/Projects/Projects";
 import Team from "../components/Team/Team";
-import AboutUs from "../components/AboutUs/AboutUs";
 import Colaboradores from "../components/Colaboradores/Colaboradores";
+import QueYParaQue from "../components/QueYParaQue/QueYParaQue";
 
 export default function HomePage() {
   // Crear referencias para cada sección
@@ -47,7 +47,7 @@ export default function HomePage() {
         <Home />
       </div>
       <div ref={aboutUsRef}>
-        <AboutUs />
+        <QueYParaQue />
       </div>
       <div ref={projectsRef}>
         <Projects />

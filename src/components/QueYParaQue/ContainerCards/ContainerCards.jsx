@@ -4,6 +4,7 @@ import GalaxiaIcon from "../../Icons/GalaxiaIcon";
 import EstrellasIcon from "../../Icons/EstrellasIcon";
 import IAIcon from "../../Icons/IAIcon";
 import { useState } from "react";
+import { aboutUs } from "../../../assets/data/AboutUs";
 
 export default function ContainerCards() {
   const [sizeBlue, setSizeBlue] = useState(true);
@@ -32,28 +33,28 @@ export default function ContainerCards() {
       sx={{ width: "100%" }}
     >
       <Card
-        description={`Lorem ipsum dolor sit amet.\nConsectetur adipiscing elit.`} 
-        fullDescripcion="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo"
+        description={aboutUs.cards[0].subtitle}
+        fullDescripcion={aboutUs.cards[0].content}
         icon={<GalaxiaIcon />}
-        title="Qué"
+        title={aboutUs.cards[0].title}
         color="blue"
         handleSize={handleSizeBlue}
         size={sizeBlue}
       />
       <Card
-        description={`Lorem ipsum dolor sit amet.\nConsectetur adipiscing elit.`} 
-        fullDescripcion="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo"
+        description={aboutUs.cards[1].subtitle}
+        fullDescripcion={aboutUs.cards[1].content}
         icon={<EstrellasIcon />}
-        title="Para Qué"
+        title={aboutUs.cards[1].title}
         color="purple"
         handleSize={handleSizePurple}
         size={sizePurple}
       />
       <Card
-        description={`Lorem ipsum dolor sit amet.\nConsectetur adipiscing elit.`} 
-        fullDescripcion="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo"
+        description={aboutUs.cards[2].subtitle}
+        fullDescripcion={aboutUs.cards[2].content}
         icon={<IAIcon />}
-        title="Cómo"
+        title={aboutUs.cards[2].title}
         color="yellow"
         handleSize={handleSizeYellow}
         size={sizeYellow}
