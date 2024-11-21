@@ -40,7 +40,6 @@ export default function ContainerCards() {
         handleSize={handleSizeBlue}
         size={sizeBlue}
       />
-      {/* Tarjeta morada con los eventos de mouse */}
       <Card
         description={`Lorem ipsum dolor sit amet.\nConsectetur adipiscing elit.`} 
         fullDescripcion="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, cumque. Consequuntur molestias praesentium corporis earum autem sint, aliquid odio amet! Nihil adipisci assumenda vero asperiores earum et temporibus fuga nemo"
