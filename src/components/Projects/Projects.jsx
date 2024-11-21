@@ -9,7 +9,7 @@ export default function Projects() {
       <Box
         component="section"
         id="Proyectos"
-        sx={{width: "100%", marginTop: "4rem" }}
+        sx={{ width: "100%", marginTop: "4rem" }}
       >
         <Container
           maxWidth="xxl"
@@ -41,8 +41,8 @@ export default function Projects() {
                   Nuestro Proyectos
                 </Typography>
                 <Typography variant="h6" color="text.secondary" align="left">
-                  Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit
-                  amet, consectetur adipisicing elit.
+                  Impulsamos proyectos que visibilizan y empoderan a las mujeres
+                  en la tecnología, construyendo un futuro más inclusivo.
                 </Typography>
                 <Button
                   variant="contained"

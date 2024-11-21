@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Section from "../Section/Section";
 import { Box, Typography, Button } from "@mui/material";
-import NorthEastIcon from '@mui/icons-material/NorthEast';
+import NorthEastIcon from "@mui/icons-material/NorthEast";
 import GalaxyImg from "../../assets/images/Galaxy.png";
 import { grey } from "@mui/material/colors";
 import Espiral from "../../assets/images/Vector espiral logo.svg";
@@ -100,7 +100,7 @@ export default function Team() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          padding: { xs: "2rem 1rem", md: "2rem 8rem" },
+          padding: { xs: "2rem 1rem" },
           "&::before": {
             content: '""',
             position: "absolute",
@@ -116,13 +116,33 @@ export default function Team() {
           },
         }}
       >
-        <Typography variant="h1" sx={{ fontSize: { xs: "5vw", md: "3vw" }, color: COLORS.green300, mb: "0.5vw", textAlign: "left" }}>
-          Comunidad PHI
-        </Typography>
-        <Typography variant="h6" sx={{ fontSize: { xs: "3vw", md: "1.2vw" }, color: COLORS.grey, mb: "1vw", textAlign: "left" }}>
-          Lorem ipsum dolor sit amet consectetur. Id at elementum
-        </Typography>
-
+        <Box component="section" marginBottom="3rem">
+          <Typography
+            variant="h1"
+            sx={{
+              fontSize: { xs: "5vw", md: "3vw" },
+              color: COLORS.green300,
+              mb: "0.5vw",
+              textAlign: "left",
+            }}
+          >
+            Comunidad PHI
+          </Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              fontSize: { xs: "3vw", md: "1.2vw" },
+              color: COLORS.grey,
+              mb: "1vw",
+              textAlign: "left",
+            }}
+          >
+            Creemos firmemente en el poder colectivo para multiplicar esfuerzos
+            individuales y generar un cambio exponencial. Queremos inpirarte,
+            movilizarte y que formes parte de este movimiento. ¡Porque el cambio
+            que soñamos empieza contigo!
+          </Typography>
+        </Box>
         <Box
           sx={{
             width: "80%",
@@ -161,20 +181,108 @@ export default function Team() {
           </Box>
 
           {/* Círculos decorativos (no interactivos) */}
-          <Box sx={{ backgroundColor: COLORS.green300, width: "2vw", height: "2vw", borderRadius: "50%", position: "absolute", top: { xs: "-6000%", sm: "-6000%", md: "-4000%" }, right: "27%", opacity: 0.6 }} />
-          <Box sx={{ backgroundColor: COLORS.purple300, width: "1vw", height: "1vw", borderRadius: "50%", position: "absolute", top: { xs: "-3000%", sm: "-3000%", md: "-1500%" }, right: "30%", opacity: 0.6 }} />
-          <Box sx={{ backgroundColor: COLORS.purple100, width: "2vw", height: "2vw", borderRadius: "50%", position: "absolute", top: { xs: "1000%", sm: "1500%", md: "1000%" }, left: "27%", opacity: 0.6 }} />
-          <Box sx={{ position: "relative", backgroundColor: COLORS.black, width: "2vw", height: "2vw", borderRadius: "50%", top: "-0.9vw", left: "-2%" }} />
-          <Box sx={{ backgroundColor: COLORS.black, width: "2vw", height: "2vw", borderRadius: "50%", position: "absolute", top: "-0.9vw", right: "-2%" }} />
+          <Box
+            sx={{
+              backgroundColor: COLORS.green300,
+              width: "2vw",
+              height: "2vw",
+              borderRadius: "50%",
+              position: "absolute",
+              top: { xs: "-6000%", sm: "-6000%", md: "-4000%" },
+              right: "27%",
+              opacity: 0.6,
+            }}
+          />
+          <Box
+            sx={{
+              backgroundColor: COLORS.purple300,
+              width: "1vw",
+              height: "1vw",
+              borderRadius: "50%",
+              position: "absolute",
+              top: { xs: "-3000%", sm: "-3000%", md: "-1500%" },
+              right: "30%",
+              opacity: 0.6,
+            }}
+          />
+          <Box
+            sx={{
+              backgroundColor: COLORS.purple100,
+              width: "2vw",
+              height: "2vw",
+              borderRadius: "50%",
+              position: "absolute",
+              top: { xs: "1000%", sm: "1500%", md: "1000%" },
+              left: "27%",
+              opacity: 0.6,
+            }}
+          />
+          <Box
+            sx={{
+              position: "relative",
+              backgroundColor: COLORS.black,
+              width: "2vw",
+              height: "2vw",
+              borderRadius: "50%",
+              top: "-0.9vw",
+              left: "-2%",
+            }}
+          />
+          <Box
+            sx={{
+              backgroundColor: COLORS.black,
+              width: "2vw",
+              height: "2vw",
+              borderRadius: "50%",
+              position: "absolute",
+              top: "-0.9vw",
+              right: "-2%",
+            }}
+          />
         </Box>
 
         {/* Círculos interactivos con animación */}
         <Box sx={{ position: "relative", width: "100%", height: "100%" }}>
-          <InteractiveCircle color={COLORS.yellow200} text="Benefactores" link="/link1" size="7.5vw" position={{ top: { xs: "25%", md: "5%" }, left: "25%" }} isActive={activeCircle === 0} />
-          <InteractiveCircle color={COLORS.purple300} text="Colaboradores" link="/link2" size="8vw" position={{ top: { xs: "15%", md: "-25%" }, left: "50%" }} isActive={activeCircle === 1} />
-          <InteractiveCircle color={COLORS.purple200} text="Voluntarios" link="/link3" size="6vw" position={{ top: { xs: "30%", md: "8%" }, left: "75%" }} isActive={activeCircle === 2} />
-          <InteractiveCircle color={COLORS.green300} text="Socios" link="/link4" size="5.5vw" position={{ top: { xs: "70%", md: "70%" }, left: "20%" }} isActive={activeCircle === 3} />
-          <InteractiveCircle color={COLORS.green200} text="Patrocinadores" link="/link5" size="8.5vw" position={{ top: { xs: "60%", md: "60%" }, left: "70%" }} isActive={activeCircle === 4} />
+          <InteractiveCircle
+            color={COLORS.yellow200}
+            text="Benefactores"
+            link="/link1"
+            size="7.5vw"
+            position={{ top: { xs: "25%", md: "5%" }, left: "25%" }}
+            isActive={activeCircle === 0}
+          />
+          <InteractiveCircle
+            color={COLORS.purple300}
+            text="Colaboradores"
+            link="/link2"
+            size="8vw"
+            position={{ top: { xs: "15%", md: "-25%" }, left: "50%" }}
+            isActive={activeCircle === 1}
+          />
+          <InteractiveCircle
+            color={COLORS.purple200}
+            text="Voluntarios"
+            link="/link3"
+            size="6vw"
+            position={{ top: { xs: "30%", md: "8%" }, left: "75%" }}
+            isActive={activeCircle === 2}
+          />
+          <InteractiveCircle
+            color={COLORS.green300}
+            text="Socios"
+            link="/link4"
+            size="5.5vw"
+            position={{ top: { xs: "70%", md: "70%" }, left: "20%" }}
+            isActive={activeCircle === 3}
+          />
+          <InteractiveCircle
+            color={COLORS.green200}
+            text="Patrocinadores"
+            link="/link5"
+            size="8.5vw"
+            position={{ top: { xs: "60%", md: "60%" }, left: "70%" }}
+            isActive={activeCircle === 4}
+          />
         </Box>
 
         {/* Botón Únete */}
@@ -202,7 +310,17 @@ export default function Team() {
             }}
           >
             Únete
-            <NorthEastIcon className="icon-circle" sx={{ marginLeft: "0.5rem", padding: "0.3rem", color: COLORS.white, background: COLORS.green300, borderRadius: "50%", fontSize: SIZES.iconFontSize }} />
+            <NorthEastIcon
+              className="icon-circle"
+              sx={{
+                marginLeft: "0.5rem",
+                padding: "0.3rem",
+                color: COLORS.white,
+                background: COLORS.green300,
+                borderRadius: "50%",
+                fontSize: SIZES.iconFontSize,
+              }}
+            />
           </Button>
         </Box>
       </Box>
