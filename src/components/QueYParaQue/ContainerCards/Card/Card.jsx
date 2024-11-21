@@ -8,6 +8,7 @@ export default function Card({
   handleSize,
   fullDescripcion,
 }) {
+  
   const getClassName = () => {
     switch (color) {
       case "blue":
