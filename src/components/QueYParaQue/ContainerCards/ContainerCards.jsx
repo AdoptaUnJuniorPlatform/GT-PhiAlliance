@@ -9,7 +9,7 @@ import { aboutUs } from "../../../assets/data/AboutUs";
 export default function ContainerCards() {
   const [sizeBlue, setSizeBlue] = useState(true);
   const [sizePurple, setSizePurple] = useState(true);
-  const [sizeYellow, setSizeYellow] = useState(false);
+  const [sizeYellow, setSizeYellow] = useState(true);
 
   const handleSizeBlue = () => {
     setSizeBlue(!sizeBlue);
