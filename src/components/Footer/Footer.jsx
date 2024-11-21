@@ -16,7 +16,7 @@ export default function Footer() {
           gridTemplateColumns: { xs: "1fr 1fr", md: "1fr 2fr 1fr" },
           alignItems: "center",
           width: "100%",
-          marginTop: "4rem",
+          marginTop: "2rem",
           boxSizing: "border-box",
           gap: { xs: "1rem", md: "0" },
         }}
@@ -26,16 +26,21 @@ export default function Footer() {
           sx={{
             display: "flex",
             justifyContent: "flex-start",
-            cursor: "pointer",
           }}
-          onClick={() => window.scrollTo("Home",{behavior: "smooth" })}
+          onClick={() => window.scrollTo("Home", { behavior: "smooth" })}
         >
-          <img
+          <Box
+            component="img"
             src={logo}
             alt="PHI Alliance Logo"
-            style={{
-              width: "100px",
+            sx={{
+              width: "60px",
               height: "auto",
+              cursor: "pointer",
+              transition: "box-shadow 0.3s ease-in-out",
+              "&:hover": {
+                boxShadow: "0px 5px 10px 5px rgba(96, 251, 186, 0.5)",
+              },
             }}
           />
         </Box>
@@ -47,6 +52,7 @@ export default function Footer() {
             justifyContent: "right",
             gap: "2rem",
             flexDirection: "row",
+            fontSize: "0.75rem",
           }}
         >
           <Box component="ul" sx={{ listStyle: "none", padding: 0 }}>
@@ -76,7 +82,7 @@ export default function Footer() {
                 "&:hover": { color: "#404040" },
               }}
             >
-              App
+              Qué,cómo y para qué
             </Link>
             <Link
               href="#"
@@ -90,7 +96,7 @@ export default function Footer() {
                 "&:hover": { color: "#404040" },
               }}
             >
-              About
+              Comunidad
             </Link>
             <Link
               href="#"
@@ -103,7 +109,7 @@ export default function Footer() {
                 "&:hover": { color: "#404040" },
               }}
             >
-              People
+              Proyectos
             </Link>
           </Box>
           <Box component="ul" sx={{ listStyle: "none", padding: 0 }}>
@@ -119,7 +125,7 @@ export default function Footer() {
                 "&:hover": { color: "#404040" },
               }}
             >
-              For school
+              Síguenos
             </Link>
             <Link
               href="#"
@@ -133,7 +139,7 @@ export default function Footer() {
                 "&:hover": { color: "#404040" },
               }}
             >
-              Brain training
+              Manifiesto
             </Link>
             <Link
               href="#"
@@ -147,7 +153,7 @@ export default function Footer() {
                 "&:hover": { color: "#404040" },
               }}
             >
-              E-learning
+              Únete
             </Link>
             <Link
               href="#"
@@ -160,7 +166,7 @@ export default function Footer() {
                 "&:hover": { color: "#404040" },
               }}
             >
-              Online modules
+              Contáctanos
             </Link>
           </Box>
           <Box component="ul" sx={{ listStyle: "none", padding: 0 }}>
@@ -176,7 +182,7 @@ export default function Footer() {
                 "&:hover": { color: "#404040" },
               }}
             >
-              Media
+              Política de Privacidad
             </Link>
             <Link
               href="#"
@@ -190,7 +196,7 @@ export default function Footer() {
                 "&:hover": { color: "#404040" },
               }}
             >
-              Support Us
+              Política de Cookies
             </Link>
             <Link
               href="#"
@@ -204,7 +210,7 @@ export default function Footer() {
                 "&:hover": { color: "#404040" },
               }}
             >
-              Contact
+              Aviso Legal
             </Link>
             <Link
               href="#"
@@ -216,9 +222,7 @@ export default function Footer() {
                 transition: "color 0.3s",
                 "&:hover": { color: "#404040" },
               }}
-            >
-              Places
-            </Link>
+            ></Link>
           </Box>
         </Box>
 
@@ -232,7 +236,7 @@ export default function Footer() {
             top: "-2.5vw",
           }}
         >
-          <IconButton
+          {/* <IconButton
             href="#"
             sx={{
               color: "#574ea0",
@@ -245,7 +249,7 @@ export default function Footer() {
             }}
           >
             <InstagramIcon />
-          </IconButton>
+          </IconButton> */}
           <IconButton
             href="#"
             sx={{
@@ -260,7 +264,7 @@ export default function Footer() {
           >
             <LinkedInIcon />
           </IconButton>
-          <IconButton
+          {/* <IconButton
             href="#"
             sx={{
               color: "#574ea0",
@@ -273,7 +277,7 @@ export default function Footer() {
             }}
           >
             <TwitterIcon />
-          </IconButton>
+          </IconButton> */}
         </Box>
       </Box>
     </Section>
