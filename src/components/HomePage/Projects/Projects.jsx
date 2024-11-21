@@ -1,7 +1,8 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
-import Section from "../Section/Section";
+import Section from "../../Section/Section";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
-import ImgProyectos from "../../assets/images/imagen-proyectos.png";
+import ImgProyectos from "../../../assets/images/imagen-proyectos.png";
+import { Link } from "react-router-dom";
 
 export default function Projects() {
   return (
@@ -44,55 +45,57 @@ export default function Projects() {
                   Impulsamos proyectos que visibilizan y empoderan a las mujeres
                   en la tecnología, construyendo un futuro más inclusivo.
                 </Typography>
-                <Button
-                  variant="contained"
-                  size="large"
-                  sx={{
-                    borderRadius: 50,
-                    alignSelf: "flex-start",
-                    backgroundColor: "white",
-                    color: "#9B84EE",
-                    "&:hover": {
-                      backgroundColor: "#574EA0",
-                      color: "white",
-                      "& .icon-container": {
-                        backgroundColor: "white",
-                        "& .icon-arrow": {
-                          color: "#574EA0",
+                <Link to="/proyectos">
+                  <Button
+                    variant="contained"
+                    size="large"
+                    sx={{
+                      borderRadius: 50,
+                      alignSelf: "flex-start",
+                      backgroundColor: "white",
+                      color: "#9B84EE",
+                      "&:hover": {
+                        backgroundColor: "#574EA0",
+                        color: "white",
+                        "& .icon-container": {
+                          backgroundColor: "white",
+                          "& .icon-arrow": {
+                            color: "#574EA0",
+                          },
                         },
                       },
-                    },
-                    border: "1px solid #9B84EE",
-                    gap: "1rem",
-                    padding: "1.5rem",
-                    fontSize: "1.5rem",
-                  }}
-                >
-                  Leer más
-                  <Box
-                    component={"section"}
-                    className="icon-container"
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      borderRadius: "50%",
-                      backgroundColor: "#574EA0",
-                      height: "3rem",
-                      width: "3rem",
-                      transition: "background-color 0.3s",
+                      border: "1px solid #9B84EE",
+                      gap: "1rem",
+                      padding: "1.5rem",
+                      fontSize: "1.5rem",
                     }}
                   >
-                    <NorthEastIcon
-                      className="icon-arrow"
+                    Leer más
+                    <Box
+                      component={"section"}
+                      className="icon-container"
                       sx={{
-                        color: "white",
-                        fontSize: "1.5rem",
-                        transition: "color 0.3s",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        borderRadius: "50%",
+                        backgroundColor: "#574EA0",
+                        height: "3rem",
+                        width: "3rem",
+                        transition: "background-color 0.3s",
                       }}
-                    />
-                  </Box>
-                </Button>
+                    >
+                      <NorthEastIcon
+                        className="icon-arrow"
+                        sx={{
+                          color: "white",
+                          fontSize: "1.5rem",
+                          transition: "color 0.3s",
+                        }}
+                      />
+                    </Box>
+                  </Button>
+                </Link>
               </Stack>
             </Box>
             <Box display="flex" justifyContent="flex-end">

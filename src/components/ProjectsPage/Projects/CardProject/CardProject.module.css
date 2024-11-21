@@ -1,0 +1,22 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  border-radius: 20px;
+  background-color: purple;
+}
+
+.imgCard {
+  border-radius: 20px;
+  height: 50%;
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.imgCard img {
+  width: 100%;
+  clip-path: inset(0 0 50% 0);
+}

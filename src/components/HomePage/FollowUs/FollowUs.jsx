@@ -1,5 +1,3 @@
-import React from "react";
-import Section from "../Section/Section";
 import {
   Box,
   Typography,
@@ -11,10 +9,11 @@ import {
 } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-import Image1 from "../../assets/images/Imagen tarjeta blog 1.webp";
-import Image2 from "../../assets/images/Imagen tarjeta blog 2.webp";
-import Image3 from "../../assets/images/Imagen tarjeta blog 3.webp";
+import Image1 from "../../../assets/images/Imagen tarjeta blog 1.webp";
+import Image2 from "../../../assets/images/Imagen tarjeta blog 2.webp";
+import Image3 from "../../../assets/images/Imagen tarjeta blog 3.webp";
 import "./FollowUs.css";
+import Section from "../../Section/Section";
 
 export default function FollowUs() {
   const cardsData = [

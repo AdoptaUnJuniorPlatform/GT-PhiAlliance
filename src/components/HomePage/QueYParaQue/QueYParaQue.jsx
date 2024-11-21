@@ -1,14 +1,13 @@
 import { Box, Container, Typography } from "@mui/material";
-import Section from "../Section/Section";
+import Section from "../../Section/Section";
 import ContainerCards from "./ContainerCards/ContainerCards";
 
-export default function AboutUs() {
+export default function QueYParaQue() {
   return (
     <Section>
       <Container
         maxWidth="xxl"
         disableGutters
-        id="Qué, cómo y por qué"
         sx={{
           display: "flex",
           flexDirection: "column",

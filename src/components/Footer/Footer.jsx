@@ -28,7 +28,7 @@ export default function Footer() {
             justifyContent: "flex-start",
             cursor: "pointer",
           }}
-          onClick={() => window.scrollTo("Home",{behavior: "smooth" })}
+          onClick={() => window.scrollTo("Home", { behavior: "smooth" })}
         >
           <img
             src={logo}

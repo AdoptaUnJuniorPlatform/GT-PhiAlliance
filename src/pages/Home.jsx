@@ -1,11 +1,11 @@
 import { useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import FollowUs from "../components/FollowUs/FollowUs";
-import Home from "../components/Home/Home";
-import Projects from "../components/Projects/Projects";
-import Team from "../components/Team/Team";
-import Colaboradores from "../components/Colaboradores/Colaboradores";
-import QueYParaQue from "../components/QueYParaQue/QueYParaQue";
+import QueYParaQue from "../components/HomePage/QueYParaQue/QueYParaQue";
+import Projects from "../components/HomePage/Projects/Projects";
+import ColaboradoresCarousel from "../components/HomePage/Colaboradores/Colaboradores";
+import Team from "../components/HomePage/Team/Team";
+import FollowUs from "../components/HomePage/FollowUs/FollowUs";
+import Home from "../components/HomePage/Home/Home";
 
 export default function HomePage() {
   const homeRef = useRef(null);
@@ -48,7 +48,7 @@ export default function HomePage() {
       <div ref={projectsRef}>
         <Projects />
       </div>
-      <Colaboradores />
+      <ColaboradoresCarousel />
       <div ref={comunidadRef}>
         <Team />
       </div>

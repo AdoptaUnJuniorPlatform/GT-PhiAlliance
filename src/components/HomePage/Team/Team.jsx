@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
-import Section from "../Section/Section";
+import { useEffect, useState } from "react";
 import { Box, Typography, Button } from "@mui/material";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
-import GalaxyImg from "../../assets/images/Galaxy.png";
-import { grey } from "@mui/material/colors";
-import Espiral from "../../assets/images/Vector espiral logo.svg";
+import GalaxyImg from "../../../assets/images/Galaxy.png";
+import Espiral from "../../../assets/images/Vector espiral logo.svg";
+import Section from "../../Section/Section";
 
 // Variables de estilo
 const COLORS = {
