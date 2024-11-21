@@ -7,7 +7,9 @@ export default function Card({
   size,
   handleSize,
   fullDescripcion,
+  fullDescripcion1
 }) {
+  
   const getClassName = () => {
     switch (color) {
       case "blue":
@@ -25,7 +27,7 @@ export default function Card({
     <div className={getClassName()} onMouseEnter={handleSize}>
       <div className={styles.circle}></div>
       <div className={styles.cardContent}>
-        <div>{icon}</div>
+        {icon}
         <span>{title}</span>
       </div>
       <div className={styles.description}>
@@ -44,8 +46,9 @@ export default function Card({
           <div>{icon}</div>
           <span>{title}</span>
         </div>
-        <div className={styles.description}>
+        <div className={styles.fullDescription}>
           <p>{fullDescripcion}</p>
+          <p>{fullDescripcion1}</p>
         </div>
       </div>
     </div>

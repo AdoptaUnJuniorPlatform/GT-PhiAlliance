@@ -2,6 +2,7 @@ import { Box, Button, Container, Typography } from "@mui/material";
 import Section from "../Section/Section";
 import LogoHome from "../../assets/images/logo-home.png";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
+import { home } from "../../assets/data/Home";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       <Box
         component="section"
         id="Home"
-        sx={{ pt: 12, pb: 8}}
+        sx={{ pt: 12, pb: 8 }}
       >
         <Container maxWidth="xxl" disableGutters sx={{ display: "flex" }}>
           <Box display="flex" flexDirection={{ xs: "column", lg: "row", marginTop: "2rem" }}>
@@ -23,13 +24,12 @@ export default function Home() {
                 height: "100%",
               }}
             >
-              <Box component="section">
+              <Box component="section" sx={{ display: "flex", flexDirection: "column", justifyContent: "space-evenly", height: "100%" }}>
                 <Typography variant="h1" align="left" fontSize="4.5rem">
-                  Impulsando la innovación para un impacto positivo en el mundo
+                  {home.title}
                 </Typography>
                 <Typography variant="h6" color="text.secondary" align="left">
-                  Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit
-                  amet, consectetur adipisicing elit.
+                  {home.subtitle}
                 </Typography>
               </Box>
               <Button

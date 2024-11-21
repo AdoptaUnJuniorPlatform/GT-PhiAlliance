@@ -8,25 +8,21 @@ import Colaboradores from "../components/Colaboradores/Colaboradores";
 import QueYParaQue from "../components/QueYParaQue/QueYParaQue";
 
 export default function HomePage() {
-  // Crear referencias para cada sección
   const homeRef = useRef(null);
   const aboutUsRef = useRef(null);
   const projectsRef = useRef(null);
   const comunidadRef = useRef(null);
   const followUsRef = useRef(null);
 
-  // Obtener el estado de la navegación
   const location = useLocation();
 
   useEffect(() => {
-    // Comprobar si existe un estado y desplazarse a la sección correspondiente
     if (location.state?.section) {
       scrollToSection(location.state.section);
     }
   }, [location]);
 
   const scrollToSection = (section) => {
-    // Desplazarse a la sección indicada
     const sectionsMap = {
       home: homeRef,
       aboutUs: aboutUsRef,
