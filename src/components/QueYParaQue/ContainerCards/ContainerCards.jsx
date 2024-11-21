@@ -6,7 +6,7 @@ import IAIcon from "../../Icons/IAIcon";
 import { useState } from "react";
 
 export default function ContainerCards() {
-  const [sizeBlue, setSizeBlue] = useState(false);
+  const [sizeBlue, setSizeBlue] = useState(true);
   const [sizePurple, setSizePurple] = useState(true);
   const [sizeYellow, setSizeYellow] = useState(true);
 
