@@ -14,7 +14,7 @@ export default function Footer() {
         component="footer"
         sx={{
           display: "grid",
-          gridTemplateColumns: { xs: "1fr", md: "1fr 2fr 1fr" },
+          gridTemplateColumns: { xs: "1fr 1fr", md: "1fr 2fr 1fr" },
           alignItems: "center",
           width: "100%",
           marginTop: "2rem",
@@ -49,74 +49,74 @@ export default function Footer() {
         {/* Columna 2: Enlaces */}
         <Box
           sx={{
-            display: "grid",
+            display: { xs: "none", md: "grid" },
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "1rem",
             fontSize: "0.75rem",
-            justifySelf: "end", 
-            marginLeft: "2rem", 
+            justifySelf: "end",
+            marginLeft: "2rem",
           }}
         >
           {/* Primera columna */}
           <Box component="ul" sx={{ listStyle: "none", padding: 0 }}>
             <li>
-              <Link
-                to="/"
-                style={{
-                  color: "#686868",
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  transition: "color 0.3s",
-                }}
-                onMouseOver={(e) => (e.target.style.color = "#404040")}
-                onMouseOut={(e) => (e.target.style.color = "#686868")}
-              >
-                Home
+              <Link to="/" style={{ textDecoration: "none" }}>
+                <Box
+                  sx={{
+                    color: "#686868",
+                    transition: "color 0.3s",
+                    "&:hover": {
+                      color: "#404040",
+                    },
+                  }}
+                >
+                  Home
+                </Box>
               </Link>
             </li>
             <li>
-              <Link
-                to="/about"
-                style={{
-                  color: "#686868",
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  transition: "color 0.3s",
-                }}
-                onMouseOver={(e) => (e.target.style.color = "#404040")}
-                onMouseOut={(e) => (e.target.style.color = "#686868")}
-              >
-                Qué, cómo y para qué
+              <Link to="/about" style={{ textDecoration: "none" }}>
+                <Box
+                  sx={{
+                    color: "#686868",
+                    transition: "color 0.3s",
+                    "&:hover": {
+                      color: "#404040",
+                    },
+                  }}
+                >
+                  Qué, cómo y para qué
+                </Box>
               </Link>
             </li>
             <li>
-              <Link
-                to="/comunidad"
-                style={{
-                  color: "#686868",
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  transition: "color 0.3s",
-                }}
-                onMouseOver={(e) => (e.target.style.color = "#404040")}
-                onMouseOut={(e) => (e.target.style.color = "#686868")}
-              >
-                Comunidad
+              <Link to="/comunidad" style={{ textDecoration: "none" }}>
+                <Box
+                  sx={{
+                    color: "#686868",
+                    transition: "color 0.3s",
+                    "&:hover": {
+                      color: "#404040",
+                    },
+                  }}
+                >
+                  Comunidad
+                </Box>
               </Link>
             </li>
             <li>
-              <Link
-                to="/proyectos"
-                style={{
-                  color: "#686868",
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  transition: "color 0.3s",
-                }}
-                onMouseOver={(e) => (e.target.style.color = "#404040")}
-                onMouseOut={(e) => (e.target.style.color = "#686868")}
-              >
-                Proyectos
+              <Link to="/proyectos" style={{ textDecoration: "none" }}>
+                <Box
+                  sx={{
+                    color: "#686868",
+                    transition: "color 0.3s",
+                    "&:hover": {
+                      color: "#404040",
+                    },
+                  }}
+                >
+                  Proyectos
+                </Box>
               </Link>
             </li>
           </Box>
@@ -124,63 +124,63 @@ export default function Footer() {
           {/* Segunda columna */}
           <Box component="ul" sx={{ listStyle: "none", padding: 0 }}>
             <li>
-              <Link
-                to="/siguenos"
-                style={{
-                  color: "#686868",
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  transition: "color 0.3s",
-                }}
-                onMouseOver={(e) => (e.target.style.color = "#404040")}
-                onMouseOut={(e) => (e.target.style.color = "#686868")}
-              >
-                Síguenos
+              <Link to="/siguenos" style={{ textDecoration: "none" }}>
+                <Box
+                  sx={{
+                    color: "#686868",
+                    transition: "color 0.3s",
+                    "&:hover": {
+                      color: "#404040",
+                    },
+                  }}
+                >
+                  Síguenos
+                </Box>
               </Link>
             </li>
             <li>
-              <Link
-                to="/manifiesto"
-                style={{
-                  color: "#686868",
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  transition: "color 0.3s",
-                }}
-                onMouseOver={(e) => (e.target.style.color = "#404040")}
-                onMouseOut={(e) => (e.target.style.color = "#686868")}
-              >
-                Manifiesto
+              <Link to="/manifiesto" style={{ textDecoration: "none" }}>
+                <Box
+                  sx={{
+                    color: "#686868",
+                    transition: "color 0.3s",
+                    "&:hover": {
+                      color: "#404040",
+                    },
+                  }}
+                >
+                  Manifiesto
+                </Box>
               </Link>
             </li>
             <li>
-              <Link
-                to="/unete"
-                style={{
-                  color: "#686868",
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  transition: "color 0.3s",
-                }}
-                onMouseOver={(e) => (e.target.style.color = "#404040")}
-                onMouseOut={(e) => (e.target.style.color = "#686868")}
-              >
-                Únete
+              <Link to="/unete" style={{ textDecoration: "none" }}>
+                <Box
+                  sx={{
+                    color: "#686868",
+                    transition: "color 0.3s",
+                    "&:hover": {
+                      color: "#404040",
+                    },
+                  }}
+                >
+                  Únete
+                </Box>
               </Link>
             </li>
             <li>
-              <Link
-                to="/contact"
-                style={{
-                  color: "#686868",
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  transition: "color 0.3s",
-                }}
-                onMouseOver={(e) => (e.target.style.color = "#404040")}
-                onMouseOut={(e) => (e.target.style.color = "#686868")}
-              >
-                Contáctanos
+              <Link to="/contact" style={{ textDecoration: "none" }}>
+                <Box
+                  sx={{
+                    color: "#686868",
+                    transition: "color 0.3s",
+                    "&:hover": {
+                      color: "#404040",
+                    },
+                  }}
+                >
+                  Contáctanos
+                </Box>
               </Link>
             </li>
           </Box>
@@ -188,48 +188,48 @@ export default function Footer() {
           {/* Tercera columna */}
           <Box component="ul" sx={{ listStyle: "none", padding: 0 }}>
             <li>
-              <Link
-                to="/privacidad"
-                style={{
-                  color: "#686868",
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  transition: "color 0.3s",
-                }}
-                onMouseOver={(e) => (e.target.style.color = "#404040")}
-                onMouseOut={(e) => (e.target.style.color = "#686868")}
-              >
-                Política de Privacidad
+              <Link to="/privacidad" style={{ textDecoration: "none" }}>
+                <Box
+                  sx={{
+                    color: "#686868",
+                    transition: "color 0.3s",
+                    "&:hover": {
+                      color: "#404040",
+                    },
+                  }}
+                >
+                  Política de Privacidad
+                </Box>
               </Link>
             </li>
             <li>
-              <Link
-                to="/cookies"
-                style={{
-                  color: "#686868",
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  transition: "color 0.3s",
-                }}
-                onMouseOver={(e) => (e.target.style.color = "#404040")}
-                onMouseOut={(e) => (e.target.style.color = "#686868")}
-              >
-                Política de Cookies
+              <Link to="/cookies" style={{ textDecoration: "none" }}>
+                <Box
+                  sx={{
+                    color: "#686868",
+                    transition: "color 0.3s",
+                    "&:hover": {
+                      color: "#404040",
+                    },
+                  }}
+                >
+                  Política de Cookies
+                </Box>
               </Link>
             </li>
             <li>
-              <Link
-                to="/legal"
-                style={{
-                  color: "#686868",
-                  textDecoration: "none",
-                  cursor: "pointer",
-                  transition: "color 0.3s",
-                }}
-                onMouseOver={(e) => (e.target.style.color = "#404040")}
-                onMouseOut={(e) => (e.target.style.color = "#686868")}
-              >
-                Aviso Legal
+              <Link to="/legal" style={{ textDecoration: "none" }}>
+                <Box
+                  sx={{
+                    color: "#686868",
+                    transition: "color 0.3s",
+                    "&:hover": {
+                      color: "#404040",
+                    },
+                  }}
+                >
+                  Aviso Legal
+                </Box>
               </Link>
             </li>
           </Box>
@@ -266,3 +266,4 @@ export default function Footer() {
     </Section>
   );
 }
+
