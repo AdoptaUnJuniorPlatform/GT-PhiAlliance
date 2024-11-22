@@ -1,10 +1,10 @@
 import { Box } from "@mui/material";
 import Card from "./Card/Card";
-import GalaxiaIcon from "../../Icons/GalaxiaIcon";
-import EstrellasIcon from "../../Icons/EstrellasIcon";
-import IAIcon from "../../Icons/IAIcon";
+import GalaxiaIcon from "../../../Icons/GalaxiaIcon";
+import EstrellasIcon from "../../../Icons/EstrellasIcon";
+import IAIcon from "../../../Icons/IAIcon";
 import { useState } from "react";
-import { aboutUs } from "../../../assets/data/AboutUs";
+import { aboutUs } from "../../../../assets/data/AboutUs";
 
 export default function ContainerCards() {
   const [sizeBlue, setSizeBlue] = useState(true);

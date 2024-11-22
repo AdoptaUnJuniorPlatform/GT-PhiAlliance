@@ -6,6 +6,7 @@ import Comunidad from "./pages/Comunidad"; // Importa la nueva página Comunidad
 import theme from "./theme";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Projects from "./pages/Projects";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/comunidad" element={<Comunidad />} /> {/* Nueva ruta para Comunidad */}
+          <Route path="/comunidad" element={<Comunidad />} />
+          <Route path="/proyectos" element={<Projects />} />
         </Routes>
         <Footer />
       </Router>

@@ -1,19 +1,18 @@
 import { Box, Button, Container, Typography } from "@mui/material";
-import Section from "../Section/Section";
-import LogoHome from "../../assets/images/logo-home.png";
+import LogoHome from "../../../assets/images/logo-home.png";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
-import { home } from "../../assets/data/Home";
+import { home } from "../../../assets/data/Home";
+import Section from "../../Section/Section";
 
 export default function Home() {
   return (
     <Section>
-      <Box
-        component="section"
-        id="Home"
-        sx={{ pt: 12, pb: 8 }}
-      >
+      <Box component="section" id="Home" sx={{ pt: 12, pb: 8 }}>
         <Container maxWidth="xxl" disableGutters sx={{ display: "flex" }}>
-          <Box display="flex" flexDirection={{ xs: "column", lg: "row", marginTop: "2rem" }}>
+          <Box
+            display="flex"
+            flexDirection={{ xs: "column", lg: "row", marginTop: "2rem" }}
+          >
             <Box
               flex={1}
               mb={{ xs: 4, lg: 0 }}
@@ -24,7 +23,15 @@ export default function Home() {
                 height: "100%",
               }}
             >
-              <Box component="section" sx={{ display: "flex", flexDirection: "column", justifyContent: "space-evenly", height: "100%" }}>
+              <Box
+                component="section"
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-evenly",
+                  height: "100%",
+                }}
+              >
                 <Typography variant="h1" align="left" fontSize="4.5rem">
                   {home.title}
                 </Typography>
