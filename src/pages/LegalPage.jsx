@@ -1,24 +1,20 @@
-import React,{ useEffect } from "react";
+import React, { useEffect } from "react";
 import { Box, Typography } from "@mui/material";
 import { useLocation } from "react-router-dom";
 
-
 export default function LegalPage() {
+  const location = useLocation();
 
-    const location = useLocation();
-
-    useEffect(() => {
-      if (location.hash) {
-        // Elimina el "#" del hash y busca el elemento con el id correspondiente
-        const targetElement = document.getElementById(location.hash.substring(1));
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: "smooth" });
-        }
+  useEffect(() => {
+    if (location.hash) {
+      const targetElement = document.getElementById(location.hash.substring(1));
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
       }
-    }, [location]);  
+    }
+  }, [location]);
   return (
     <>
-
       {/* Contenido Principal */}
       <Box
         sx={{
@@ -26,10 +22,10 @@ export default function LegalPage() {
           margin: "0 auto",
           padding: "2rem",
           lineHeight: "1.8",
-          marginTop:"5rem",
+          marginTop: "5rem",
         }}
       >
-        {/* Sección: Política de Privacidad
+        {/* Sección: Política de Privacidad */}
         <Box
           id="privacy-policy"
           sx={{
@@ -42,12 +38,12 @@ export default function LegalPage() {
           </Typography>
           <Typography variant="body1" sx={{ marginBottom: "1rem" }}>
             En la Asociación Positive Human Impact Alliance (en adelante PHI
-            Alliance), nos tomamos muy en serio la privacidad y la protección
-            de los datos personales de nuestros usuarios. Esta Política de
+            Alliance), nos tomamos muy en serio la privacidad y la protección de
+            los datos personales de nuestros usuarios. Esta Política de
             Privacidad explica cómo recopilamos, utilizamos y protegemos la
             información que nos proporcionas a través de nuestra página web.
           </Typography>
-          <Typography variant="body1">
+          <Typography variant="body1" sx={{ marginBottom: "1rem" }}>
             <strong>1. Información que recopilamos</strong> Recopilamos la
             siguiente información cuando visitas nuestra web o te registras en
             nuestros servicios:
@@ -63,105 +59,62 @@ export default function LegalPage() {
               </li>
             </ul>
           </Typography>
-          <Typography variant="body1" sx={{ marginTop: "1rem" }}>
+          <Typography variant="body1" sx={{ marginBottom: "1rem" }}>
             <strong>2. Cómo usamos tus datos</strong> Utilizamos tu información
             para:
             <ul>
               <li>Gestionar tu registro y cuenta en nuestra plataforma.</li>
               <li>Responder a tus consultas y solicitudes.</li>
+              <li>Mejorar y personalizar tu experiencia en nuestra web.</li>
+              <li>Enviar comunicaciones y actualizaciones relevantes.</li>
+              <li>Analizar y mejorar el funcionamiento de nuestra web.</li>
+            </ul>
+          </Typography>
+          <Typography variant="body1" sx={{ marginBottom: "1rem" }}>
+            <strong>3. Compartir tu información</strong> No compartimos tus
+            datos personales con terceros, excepto en los siguientes casos:
+            <ul>
               <li>
-                Mejorar y personalizar tu experiencia en nuestra web.
+                Cuando sea necesario para prestar los servicios que solicitaste.
               </li>
+              <li>Si lo exige la ley o una orden judicial.</li>
               <li>
-                Enviar comunicaciones y actualizaciones relevantes.
-              </li>
-              <li>
-                Analizar y mejorar el funcionamiento de nuestra web.
+                Para proteger los derechos, la propiedad o la seguridad de PHI
+                Alliance, nuestros usuarios u otros.
               </li>
             </ul>
           </Typography>
-        </Box> */}
-
-{/* Sección: Política de Privacidad */}
-<Box
-  id="privacy-policy"
-  sx={{
-    marginBottom: "4rem",
-    scrollMarginTop: "150px",
-  }}
->
-  <Typography variant="h3" sx={{ marginBottom: "1rem" }}>
-    Política de Privacidad PHI
-  </Typography>
-  <Typography variant="body1" sx={{ marginBottom: "1rem" }}>
-    En la Asociación Positive Human Impact Alliance (en adelante PHI Alliance),
-    nos tomamos muy en serio la privacidad y la protección de los datos
-    personales de nuestros usuarios. Esta Política de Privacidad explica cómo
-    recopilamos, utilizamos y protegemos la información que nos proporcionas a
-    través de nuestra página web.
-  </Typography>
-  <Typography variant="body1" sx={{ marginBottom: "1rem" }}>
-    <strong>1. Información que recopilamos</strong> Recopilamos la siguiente
-    información cuando visitas nuestra web o te registras en nuestros servicios:
-    <ul>
-      <li>Datos de contacto: nombre, correo electrónico, teléfono.</li>
-      <li>
-        Información sobre tu uso de la web: páginas visitadas, tiempo de
-        navegación, preferencias.
-      </li>
-      <li>
-        Detalles de las interacciones que tengas con nosotros, como consultas o
-        solicitudes.
-      </li>
-    </ul>
-  </Typography>
-  <Typography variant="body1" sx={{ marginBottom: "1rem" }}>
-    <strong>2. Cómo usamos tus datos</strong> Utilizamos tu información para:
-    <ul>
-      <li>Gestionar tu registro y cuenta en nuestra plataforma.</li>
-      <li>Responder a tus consultas y solicitudes.</li>
-      <li>Mejorar y personalizar tu experiencia en nuestra web.</li>
-      <li>Enviar comunicaciones y actualizaciones relevantes.</li>
-      <li>Analizar y mejorar el funcionamiento de nuestra web.</li>
-    </ul>
-  </Typography>
-  <Typography variant="body1" sx={{ marginBottom: "1rem" }}>
-    <strong>3. Compartir tu información</strong> No compartimos tus datos
-    personales con terceros, excepto en los siguientes casos:
-    <ul>
-      <li>Cuando sea necesario para prestar los servicios que solicitaste.</li>
-      <li>Si lo exige la ley o una orden judicial.</li>
-      <li>
-        Para proteger los derechos, la propiedad o la seguridad de PHI Alliance,
-        nuestros usuarios u otros.
-      </li>
-    </ul>
-  </Typography>
-  <Typography variant="body1" sx={{ marginBottom: "1rem" }}>
-    <strong>4. Seguridad de tus datos</strong> Implementamos medidas de seguridad
-    técnicas y organizativas adecuadas para proteger tus datos personales contra
-    accesos no autorizados, alteraciones, divulgación o destrucción.
-  </Typography>
-  <Typography variant="body1" sx={{ marginBottom: "1rem" }}>
-    <strong>5. Tus derechos</strong> Conforme a la normativa de protección de
-    datos, tienes derecho a:
-    <ul>
-      <li>Acceder, rectificar, suprimir o limitar el tratamiento de tus datos.</li>
-      <li>Oponerte al tratamiento de tus datos y retirar el consentimiento otorgado.</li>
-      <li>Presentar una reclamación ante la autoridad de control (AEPD).</li>
-    </ul>
-    Para ejercer tus derechos, ponte en contacto con nosotros a través del
-    correo electrónico <strong>dpo@phialliance.org</strong>.
-  </Typography>
-  <Typography variant="body1">
-    <strong>6. Cambios en la Política de Privacidad</strong> Nos reservamos el
-    derecho de actualizar esta Política de Privacidad cuando sea necesario. Te
-    notificaremos cualquier cambio relevante.
-  </Typography>
-</Box>
-
-
-
+          <Typography variant="body1" sx={{ marginBottom: "1rem" }}>
+            <strong>4. Seguridad de tus datos</strong> Implementamos medidas de
+            seguridad técnicas y organizativas adecuadas para proteger tus datos
+            personales contra accesos no autorizados, alteraciones, divulgación
+            o destrucción.
+          </Typography>
+          <Typography variant="body1" sx={{ marginBottom: "1rem" }}>
+            <strong>5. Tus derechos</strong> Conforme a la normativa de
+            protección de datos, tienes derecho a:
+            <ul>
+              <li>
+                Acceder, rectificar, suprimir o limitar el tratamiento de tus
+                datos.
+              </li>
+              <li>
+                Oponerte al tratamiento de tus datos y retirar el consentimiento
+                otorgado.
+              </li>
+              <li>
+                Presentar una reclamación ante la autoridad de control (AEPD).
+              </li>
+            </ul>
+            Para ejercer tus derechos, ponte en contacto con nosotros a través
+            del correo electrónico <strong>dpo@phialliance.org</strong>.
+          </Typography>
+          <Typography variant="body1">
+            <strong>6. Cambios en la Política de Privacidad</strong> Nos
+            reservamos el derecho de actualizar esta Política de Privacidad
+            cuando sea necesario. Te notificaremos cualquier cambio relevante.
+          </Typography>
+        </Box>
 
         {/* Sección: Política de Cookies */}
         <Box
@@ -189,7 +142,9 @@ export default function LegalPage() {
           <Typography variant="body1" sx={{ marginTop: "1rem" }}>
             <strong>Tipos de cookies que utilizamos</strong>
             <ul>
-              <li>Cookies de sesión: Se eliminan cuando cierras el navegador.</li>
+              <li>
+                Cookies de sesión: Se eliminan cuando cierras el navegador.
+              </li>
               <li>
                 Cookies persistentes: Se mantienen en tu dispositivo durante un
                 tiempo determinado.
