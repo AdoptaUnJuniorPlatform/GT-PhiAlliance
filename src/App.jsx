@@ -7,6 +7,7 @@ import theme from "./theme";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Projects from "./pages/Projects";
+import LegalPage from "./pages/LegalPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/comunidad" element={<Comunidad />} />
           <Route path="/proyectos" element={<Projects />} />
+          <Route path="/legal" element={<LegalPage />} />
         </Routes>
         <Footer />
       </Router>

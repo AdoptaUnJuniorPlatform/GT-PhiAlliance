@@ -188,7 +188,7 @@ export default function Footer() {
           {/* Tercera columna */}
           <Box component="ul" sx={{ listStyle: "none", padding: 0 }}>
             <li>
-              <Link to="/privacidad" style={{ textDecoration: "none" }}>
+              <Link to="/legal#privacy-policy" style={{ textDecoration: "none" }}>
                 <Box
                   sx={{
                     color: "#686868",
@@ -203,7 +203,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/cookies" style={{ textDecoration: "none" }}>
+              <Link to="/legal#cookies-policy" style={{ textDecoration: "none" }}>
                 <Box
                   sx={{
                     color: "#686868",
@@ -218,7 +218,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/legal" style={{ textDecoration: "none" }}>
+              <Link to="/legal#legal-notice" style={{ textDecoration: "none" }}>
                 <Box
                   sx={{
                     color: "#686868",
