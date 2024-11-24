@@ -1,4 +1,5 @@
 import styles from "./Card.module.css";
+
 export default function Card({
   icon,
   title,
@@ -7,9 +8,7 @@ export default function Card({
   size,
   handleSize,
   fullDescripcion,
-  fullDescripcion1
 }) {
-  
   const getClassName = () => {
     switch (color) {
       case "blue":
@@ -33,7 +32,6 @@ export default function Card({
       <div className={styles.description}>
         <p>{description}</p>
       </div>
-
     </div>
   ) : (
     <div
@@ -48,7 +46,6 @@ export default function Card({
         </div>
         <div className={styles.fullDescription}>
           <p>{fullDescripcion}</p>
-          <p>{fullDescripcion1}</p>
         </div>
       </div>
     </div>

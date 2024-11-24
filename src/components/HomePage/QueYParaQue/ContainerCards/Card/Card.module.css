@@ -74,7 +74,7 @@
 .cardMaxWidthDiv {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 9rem;
   font-size: 26px;
   height: 100%;
@@ -110,9 +110,9 @@
 .fullDescription {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   height: 100%;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 span {
