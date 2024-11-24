@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 
 const pages = [
   { label: "Home", section: "home" },
-  { label: "Qué, cómo y por qué", section: "aboutUs" },
+  { label: "Qué, cómo y para qué", section: "aboutUs" },
   { label: "Comunidad", section: "comunidad" },
   { label: "Proyectos", section: "projects" },
   { label: "Síguenos", section: "followUs" },
