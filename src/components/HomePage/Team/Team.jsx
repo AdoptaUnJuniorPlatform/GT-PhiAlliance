@@ -30,8 +30,8 @@ const randomOrder = [0, 3, 1, 4, 2];
 
 const InteractiveCircle = ({ color, text, link, size, position, isActive }) => (
   <Box
-    component="a"
-    href={link}
+    component={Link}
+    to={link}
     sx={{
       backgroundColor: color,
       width: size,
