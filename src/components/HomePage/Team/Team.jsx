@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Box, Typography, Button } from "@mui/material";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import GalaxyImg from "../../../assets/images/Galaxy.png";
@@ -45,7 +46,11 @@ const InteractiveCircle = ({ color, text, link, size, position, isActive }) => (
       alignItems: "center",
       justifyContent: "center",
       textDecoration: "none",
-      fontSize: SIZES.fontSizeSmall,
+      fontSize: {
+        xs: "0.8rem",
+        sm: "1rem", 
+        md: "1.2rem", 
+      },
       textAlign: "center",
       overflow: "hidden",
       whiteSpace: "nowrap",
@@ -64,6 +69,11 @@ const InteractiveCircle = ({ color, text, link, size, position, isActive }) => (
         textOverflow: "ellipsis",
         width: "100%",
         color: COLORS.white,
+        fontSize: {
+          xs: "0.4rem",
+          sm: "0.5rem",
+          md: "0.8rem",
+        },
       }}
     >
       {text}
@@ -95,7 +105,7 @@ export default function Team() {
           position: "relative",
           overflow: "hidden",
           width: "100%",
-          height: { xs: "70vh", md: "50vw" },
+          height: { xs: "100vh",sm:"100vw", md: "50vw" },
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -144,12 +154,16 @@ export default function Team() {
         </Box>
         <Box
           sx={{
-            width: "80%",
+            width: { xs: "150%", sm: "90%", md: "90%" },
             height: "0.3vw",
             backgroundColor: COLORS.black,
             m: "2vw auto",
             position: "relative",
-            top: { xs: "35%", sm: "40%", md: "30%" },
+            top: { xs: "25%", sm: "20%", md: "30%" },
+            left:{xs:"-25%",sm:"0%",md:"0%"},
+            transform: { xs: "rotate(-90deg)", sm: "rotate(0deg)", md: "rotate(0deg)" },
+            transformOrigin: "center", 
+            transition: "transform 0.3s ease-in-out",
           }}
         >
           <Box
@@ -175,6 +189,9 @@ export default function Team() {
                 width: "50%",
                 height: "50%",
                 objectFit: "contain",
+                transform: { xs: "rotate(90deg)", sm: "rotate(0deg)", md: "rotate(0deg)" },
+            transformOrigin: "center",
+            transition: "transform 0.3s ease-in-out",
               }}
             />
           </Box>
@@ -187,7 +204,7 @@ export default function Team() {
               height: "2vw",
               borderRadius: "50%",
               position: "absolute",
-              top: { xs: "-6000%", sm: "-6000%", md: "-4000%" },
+              top: { xs: "-6000%", sm: "-4000%", md: "-4000%" },
               right: "27%",
               opacity: 0.6,
             }}
@@ -199,7 +216,7 @@ export default function Team() {
               height: "1vw",
               borderRadius: "50%",
               position: "absolute",
-              top: { xs: "-3000%", sm: "-3000%", md: "-1500%" },
+              top: { xs: "-3000%", sm: "-2000%", md: "-1500%" },
               right: "30%",
               opacity: 0.6,
             }}
@@ -245,82 +262,86 @@ export default function Team() {
           <InteractiveCircle
             color={COLORS.yellow200}
             text="Benefactores"
-            link="/link1"
-            size="7.5vw"
-            position={{ top: { xs: "25%", md: "5%" }, left: "25%" }}
+            link="/comunidad"
+            size={{xs:"12vw",sm:"8vw",md:"7.5vw"}}
+            position={{ top: { xs: "70%",sm:"10%", md: "5%" }, left: {xs:"15%",sm:"25%",md:"25%" }}}
             isActive={activeCircle === 0}
           />
           <InteractiveCircle
             color={COLORS.purple300}
             text="Colaboradores"
-            link="/link2"
-            size="8vw"
-            position={{ top: { xs: "15%", md: "-25%" }, left: "50%" }}
+            link="/comunidad"
+            size={{xs:"13vw",sm:"9vw",md:"8vw"}}
+            position={{ top: { xs: "35%",sm:"-20%", md: "-25%" }, left:{xs:"-5%",sm:"50%",md:"50%"} }}
             isActive={activeCircle === 1}
           />
           <InteractiveCircle
             color={COLORS.purple200}
             text="Voluntarios"
-            link="/link3"
-            size="6vw"
-            position={{ top: { xs: "30%", md: "8%" }, left: "75%" }}
+            link="/comunidad"
+            size={{xs:"10vw",sm:"7vw",md:"6vw"}}
+            position={{ top: { xs: "-6%",sm:"20%", md: "8%" }, left: {xs:"20%",sm:"75%",md:"75%"} }}
             isActive={activeCircle === 2}
           />
           <InteractiveCircle
             color={COLORS.green300}
             text="Socios"
-            link="/link4"
-            size="5.5vw"
-            position={{ top: { xs: "70%", md: "70%" }, left: "20%" }}
+            link="/comunidad"
+            size={{xs:"8vw",sm:"6vw",md:"5.5vw"}}
+            position={{ top: { xs: "80%", md: "75%" }, left:{xs:"75%",sm:"20%",md:"20%"}  }}
             isActive={activeCircle === 3}
           />
           <InteractiveCircle
             color={COLORS.green200}
             text="Patrocinadores"
-            link="/link5"
-            size="8.5vw"
-            position={{ top: { xs: "60%", md: "60%" }, left: "70%" }}
+            link="/comunidad"
+            size={{xs:"15vw",sm:"9vw",md:"8.5vw"}}
+            position={{ top: { xs: "8%",sm:"75%", md: "75%" }, left:{xs:"55%",sm:"70%",md:"70%"}}}
             isActive={activeCircle === 4}
           />
         </Box>
 
         {/* Botón Únete */}
-        <Box sx={{ marginTop: "auto", textAlign: "center", py: 3 }}>
-          <Button
-            href="/join"
-            variant="outlined"
-            sx={{
-              padding: "0.5vw 1.5vw",
-              top: "6%",
-              borderColor: COLORS.green300,
-              borderRadius: "30px",
-              color: COLORS.green300,
-              fontSize: SIZES.fontSizeLarge,
-              textDecoration: "none",
-              transition: "background 0.3s, color 0.3s",
-              "&:hover": {
-                backgroundColor: COLORS.green300,
-                color: COLORS.white,
-                "& .icon-circle": {
-                  backgroundColor: COLORS.white,
-                  color: COLORS.green300,
-                },
-              },
-            }}
-          >
-            Únete
-            <NorthEastIcon
-              className="icon-circle"
-              sx={{
-                marginLeft: "0.5rem",
-                padding: "0.3rem",
-                color: COLORS.white,
-                background: COLORS.green300,
-                borderRadius: "50%",
-                fontSize: SIZES.iconFontSize,
-              }}
-            />
-          </Button>
+<Box sx={{ marginTop: "auto", textAlign: "center", py: 3 }}>
+<Button
+  component="a"
+  href="https://docs.google.com/forms/d/e/1FAIpQLSe2CSFd2vtrfxSKDMtaVAiGBqOZDC6f2ZVs2IjHMZD_OFPXXg/formrestricted"
+  target="_blank"
+  rel="noopener noreferrer"
+  variant="outlined"
+  sx={{
+    padding: { xs: "0.2rem 0.5rem", sm: "0.3rem 1rem", md: "0.5rem 1.5rem" }, 
+    top: { xs: "45%", sm: "25%", md: "65%" },
+    borderColor: COLORS.green300,
+    borderRadius: "30px",
+    color: COLORS.green300,
+    fontSize: { xs: "0.8rem", sm: "1rem", md: SIZES.fontSizeLarge },
+    textDecoration: "none",
+    transition: "background 0.3s, color 0.3s",
+    "&:hover": {
+      backgroundColor: COLORS.green300,
+      color: COLORS.white,
+      "& .icon-circle": {
+        backgroundColor: COLORS.white,
+        color: COLORS.green300,
+      },
+    },
+  }}
+>
+  Únete
+  <NorthEastIcon
+    className="icon-circle"
+    sx={{
+      marginLeft: "0.3rem",
+      padding: { xs: "0.2rem", sm: "0.3rem", md: "0.3rem" }, 
+      color: COLORS.white,
+      background: COLORS.green300,
+      borderRadius: "50%",
+      fontSize: { xs: "1.2rem", sm: "1.5rem", md: SIZES.iconFontSize }, 
+    }}
+  />
+</Button>
+
         </Box>
       </Box>
     </Section>
