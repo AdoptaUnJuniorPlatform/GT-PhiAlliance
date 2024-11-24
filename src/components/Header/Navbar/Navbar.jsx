@@ -110,7 +110,9 @@ function ResponsiveAppBar() {
                   handleNavigateToSection(page.section); // Navegar a la sección específica
                 }}
               >
-                <Typography sx={{ textAlign: "center" }}>{page.label}</Typography>
+                <Typography sx={{ textAlign: "center" }}>
+                  {page.label}
+                </Typography>
               </MenuItem>
             ))}
           </Menu>
@@ -141,7 +143,9 @@ function ResponsiveAppBar() {
                 padding: ".2rem 2rem",
               }}
             >
-              {page.label}
+              <Typography sx={{ textAlign: "center", fontSize: "1.2rem" }}>
+                {page.label}
+              </Typography>
             </Button>
           ))}
         </Box>
@@ -163,9 +167,9 @@ function ResponsiveAppBar() {
               borderColor: "green",
               fontFamily: "Poppins, sans-serif",
               textTransform: "none",
-              fontSize: "1.5rem",
+              fontSize: "1.3rem",
               gap: "5px",
-              height: "4rem",
+              height: "3rem",
             }}
           >
             Contáctanos

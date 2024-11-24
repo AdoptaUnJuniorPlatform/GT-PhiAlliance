@@ -1,0 +1,62 @@
+/* Contenedor de la tarjeta */
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 3rem;
+  margin: 10px 0;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade transición para el efecto hover */
+  position: relative; /* Necesario para el posicionamiento absoluto de los elementos internos */
+}
+
+/* Colores específicos para cada tarjeta */
+.cardAqua {
+  background-color: #60bfba;
+}
+
+.cardYellow {
+  background-color: #fcbf1b;
+}
+
+.cardPurple {
+  background-color: #584f9d;
+}
+
+.cardOrange {
+  background-color: #f59d15;
+}
+
+.cardGreen {
+  background-color: #007a75;
+}
+
+/* Contenido de la tarjeta */
+.cardContent {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: right;
+  width: 50%;
+}
+
+/* Efecto hover */
+.card:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño de la tarjeta */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Añade una sombra para dar profundidad */
+  cursor: pointer; /* Cambia el cursor a una mano */
+}
+
+/* Estilos para el ícono de cierre */
+.closer {
+  position: absolute; /* Posiciona el ícono de cierre de manera independiente */
+  top: 0; /* Lo coloca en la parte superior */
+  right: 0; /* Lo coloca en la parte izquierda */
+  padding: 10px; /* Da algo de espacio alrededor del ícono */
+  cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+}
+
+/* Si lo deseas más pequeño o ajustado puedes añadir propiedades como font-size */
+.closer svg {
+  font-size: 2rem; /* Puedes ajustar el tamaño del ícono si lo deseas */
+}

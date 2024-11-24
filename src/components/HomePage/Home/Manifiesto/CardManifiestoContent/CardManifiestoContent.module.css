@@ -1,0 +1,53 @@
+.card {
+  border-radius: 20px;
+  width: 30%;
+  height: 90%;
+  animation: fadeIn 1s forwards;
+  span {
+    text-align: right;
+    font-size: 2.3rem;
+    margin: 3rem;
+  }
+}
+
+.cardAqua {
+  background-color: #60bfba;
+}
+
+.cardYellow {
+  background-color: #fcbf1b;
+}
+
+.cardPurple {
+  color: white;
+  background-color: #584f9d;
+}
+
+.cardOrange {
+  background-color: #f59d15;
+}
+
+.cardGreen {
+  color: white;
+  background-color: #007a75;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -3,8 +3,11 @@ import LogoHome from "../../../assets/images/logo-home.png";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import { home } from "../../../assets/data/Home";
 import Section from "../../Section/Section";
+import Manifiesto from "./Manifiesto/Manifiesto";
+import { useState } from "react";
 
 export default function Home() {
+  const [isOpenManifiesto, setIsOpenManifiesto] = useState(false);
   return (
     <Section>
       <Box component="section" id="Home" sx={{ pt: 12, pb: 8 }}>
@@ -51,6 +54,7 @@ export default function Home() {
                   padding: "1.5rem",
                   fontSize: "1.5rem",
                 }}
+                onClick={() => setIsOpenManifiesto(!isOpenManifiesto)}
               >
                 Manifiesto
                 <Box
@@ -82,6 +86,10 @@ export default function Home() {
               />
             </Box>
           </Box>
+          <Manifiesto
+            isOpen={isOpenManifiesto}
+            setIsOpen={setIsOpenManifiesto}
+          />
         </Container>
       </Box>
     </Section>
