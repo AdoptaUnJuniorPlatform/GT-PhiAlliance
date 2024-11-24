@@ -60,7 +60,9 @@ export default function Footer() {
           {/* Primera columna */}
           <Box component="ul" sx={{ listStyle: "none", padding: 0 }}>
             <li>
-              <Link to="/" style={{ textDecoration: "none" }}>
+              <Link to="/" style={{ textDecoration: "none" }}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
                 <Box
                   sx={{
                     color: "#686868",
@@ -75,7 +77,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/about" style={{ textDecoration: "none" }}>
+              <Link to="/" style={{ textDecoration: "none" }}
+              state={{ section: "aboutUs" }}>
                 <Box
                   sx={{
                     color: "#686868",
@@ -124,7 +127,8 @@ export default function Footer() {
           {/* Segunda columna */}
           <Box component="ul" sx={{ listStyle: "none", padding: 0 }}>
             <li>
-              <Link to="/siguenos" style={{ textDecoration: "none" }}>
+              <Link to="/" style={{ textDecoration: "none" }}
+              state={{ section: "followUsRef" }}>
                 <Box
                   sx={{
                     color: "#686868",
@@ -139,7 +143,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/manifiesto" style={{ textDecoration: "none" }}>
+              <Link to="/" style={{ textDecoration: "none" }}
+              state={{section:"homeRef"}}>
                 <Box
                   sx={{
                     color: "#686868",
@@ -154,20 +159,28 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/unete" style={{ textDecoration: "none" }}>
-                <Box
-                  sx={{
-                    color: "#686868",
-                    transition: "color 0.3s",
-                    "&:hover": {
-                      color: "#404040",
-                    },
-                  }}
-                >
-                  Únete
-                </Box>
-              </Link>
-            </li>
+  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLSe2CSFd2vtrfxSKDMtaVAiGBqOZDC6f2ZVs2IjHMZD_OFPXXg/formrestricted"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      textDecoration: "none",
+      color: "#686868",
+      transition: "color 0.3s",
+    }}
+  >
+    <Box
+      sx={{
+        "&:hover": {
+          color: "#404040",
+        },
+      }}
+    >
+      Únete
+    </Box>
+  </a>
+</li>
+
             <li>
               <Link to="/contact" style={{ textDecoration: "none" }}>
                 <Box
