@@ -22,25 +22,25 @@ import Section from "../../Section/Section";
 export default function FollowUs() {
   const cardsData = [
     {
-      image: Image1,
-      title: "Lorem ipsum dolor sit amet...",
+      image: Image2,
+      title: "Explorando el potencial de experiencias regenerativas",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Etiam nunc molestie mi id.",
-      link: "/ruta-1",
+        "El pasado 22 de noviembre de 2024, tuvimos el privilegio de reunirnos para explorar el poder transformador de las experiencias regenerativas.",
+      link: "https://www.linkedin.com/company/phialliance/",
     },
     {
-      image: Image2,
-      title: "Lorem ipsum dolor sit amet...",
+      image: Image1,
+      title: "Aprender de referentes: una experiencia transformadora",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Etiam nunc molestie mi id.",
-      link: "/ruta-2",
+      "El pasado 13 de marzo de 2024, vivimos una jornada inolvidable en el evento Abundance360 organizado por SingularityU Madrid.",
+      link: "https://www.linkedin.com/company/phialliance/",
     },
     {
       image: Image3,
-      title: "Lorem ipsum dolor sit amet...",
+      title: "¡Qué evento tan espectacular vivimos juntos!",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Etiam nunc molestie mi id.",
-      link: "/ruta-3",
+      "Todavía estamos saboreando la increíble energía que nos dejó el último encuentro de PHI Alliance el pasado 19 de septiembre de 2024",
+      link: "https://www.linkedin.com/posts/phialliance_phi-19sept2024-activity-7242884828524630016-Z_x3?utm_source=share&utm_medium=member_desktop",
     },
   ];
 
@@ -189,8 +189,9 @@ export default function FollowUs() {
                       fontWeight: "bold",
                       color: "#00695c",
                     }}
-                    component={Link}
-                    to={card.link}
+                    href={card.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Leer más
                   </Button>
