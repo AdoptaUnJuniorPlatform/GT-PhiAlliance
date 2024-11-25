@@ -11,6 +11,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LogoIcon from "../../Icons/LogoIcon";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "@mui/material";
 
 const pages = [
   { label: "Home", section: "home" },
@@ -151,6 +152,7 @@ function ResponsiveAppBar() {
         </Box>
 
         {/* Botón de contacto */}
+
         <Box
           sx={{
             flexGrow: 1,
@@ -159,22 +161,28 @@ function ResponsiveAppBar() {
             alignItems: "center",
           }}
         >
-          <Button
-            variant="outlined"
-            sx={{
-              color: "green",
-              borderRadius: "25px",
-              borderColor: "green",
-              fontFamily: "Poppins, sans-serif",
-              textTransform: "none",
-              fontSize: "1.3rem",
-              gap: "5px",
-              height: "3rem",
-            }}
+          <Link
+            href="https://chat.whatsapp.com/IA73d8ugMnX0TMRiWF437p"
+            target="_blank"
           >
-            Contáctanos
-            <WhatsAppIcon />
-          </Button>
+
+            <Button
+              variant="outlined"
+              sx={{
+                color: "green",
+                borderRadius: "25px",
+                borderColor: "green",
+                fontFamily: "Poppins, sans-serif",
+                textTransform: "none",
+                fontSize: "1.3rem",
+                gap: "5px",
+                height: "3rem",
+              }}
+            >
+              Contáctanos
+              <WhatsAppIcon />
+            </Button>
+          </Link>
         </Box>
       </Toolbar>
     </AppBar>
