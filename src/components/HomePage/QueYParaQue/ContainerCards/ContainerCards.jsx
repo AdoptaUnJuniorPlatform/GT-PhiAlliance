@@ -7,7 +7,7 @@ import { useState } from "react";
 import { aboutUs } from "../../../../assets/data/AboutUs";
 
 export default function ContainerCards() {
-  const [sizeBlue, setSizeBlue] = useState(false);
+  const [sizeBlue, setSizeBlue] = useState(true);
   const [sizePurple, setSizePurple] = useState(true);
   const [sizeYellow, setSizeYellow] = useState(true);
 
