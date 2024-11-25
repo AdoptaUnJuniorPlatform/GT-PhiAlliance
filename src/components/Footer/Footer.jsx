@@ -1,6 +1,4 @@
-import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import Section from "../Section/Section";
 import logo from "../../assets/images/Logo Phi-Footer.png";
 import { Box, IconButton } from "@mui/material";
