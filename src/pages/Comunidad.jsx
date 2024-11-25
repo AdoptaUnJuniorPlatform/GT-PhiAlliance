@@ -459,7 +459,7 @@ export default function Comunidad() {
               marginBottom: "1rem",
             }}
           >
-            del cambio
+            del cambio exponencial
           </Typography>
           <Typography
             variant="body1"
@@ -483,9 +483,10 @@ export default function Comunidad() {
             src={Estrellas}
             alt="Estrellas"
             sx={{
+              display:{xs:"none", md:"block"},
               position: "relative",
-              top: { xs: "-30rem", md: "-25rem" },
-              left: { xs: "60%", md: "60%" },
+              top: { xs: "-30rem", md: "-30rem" },
+              left: { xs: "60%", md: "105%" },
               width: { xs: "4rem", md: "4rem" },
               height: "auto",
               margin: "1rem",
@@ -493,7 +494,7 @@ export default function Comunidad() {
           />
         </Box>
 
-        <Box sx={{ width: { xs: "100%", md: "70%" } }}>
+        <Box sx={{ width: { xs: "100%", md: "60%" },marginLeft:"auto" }}>
           <List>
             {listData.map((item, index) => (
               <ListItem
@@ -502,7 +503,7 @@ export default function Comunidad() {
                   fontWeight: "bold",
                   marginBottom: "1rem",
                   border: "1px #737373 solid",
-                  borderRadius: "30px",
+                  borderRadius: "50px",
                   padding: "1rem",
                   display: "flex",
                   flexDirection: "column",

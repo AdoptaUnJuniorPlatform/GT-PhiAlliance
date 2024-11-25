@@ -8,19 +8,19 @@ import OrangeFundacionLogo from "../../../assets/images/Fundacion_orange.png";
 import InnoITLogo from "../../../assets/images/logo_innoit.webp";
 
 const logos = [
-  { src: AujLogo, alt: "AdoptaUnJunior", link: "https://adoptaunjunior.org" },
+  { src: AujLogo, alt: "AdoptaUnJunior", link: "https://www.linkedin.com/company/adoptaunjunior/" },
   {
     src: SustainableLogo,
     alt: "Sustainable Startup & Co",
-    link: "https://sustainablestartup.com",
+    link: "https://sustainablestartupco.com/",
   },
-  { src: ExvolutionLogo, alt: "Exvolution", link: "https://exvolution.com" },
+  { src: ExvolutionLogo, alt: "Exvolution", link: "https://exvolution.xyz/" },
   {
     src: OrangeFundacionLogo,
     alt: "Orange Fundación",
-    link: "https://orangefoundation.com",
+    link: "https://fundacionorange.es/",
   },
-  { src: InnoITLogo, alt: "InnoIT", link: "https://innoit.com" },
+  { src: InnoITLogo, alt: "InnoIT", link: "https://www.inno-it.es/" },
 ];
 
 export default function ColaboradoresCarousel() {
@@ -106,8 +106,8 @@ export default function ColaboradoresCarousel() {
               src={logo.src}
               alt={logo.alt}
               sx={{
-                maxHeight: "100px",
-                width: "auto",
+                maxHeight: logo.alt === "Exvolution" ? "50px" : "100px",
+                width: logo.alt === "Exvolution" ? "auto" : "auto",
                 transition: "transform 0.3s",
                 "&:hover": { transform: "scale(1.1)" },
               }}

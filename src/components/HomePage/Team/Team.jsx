@@ -147,9 +147,9 @@ export default function Team() {
             }}
           >
             Creemos firmemente en el poder colectivo para multiplicar esfuerzos
-            individuales y generar un cambio exponencial. Queremos inpirarte,
-            movilizarte y que formes parte de este movimiento. ¡Porque el cambio
-            que soñamos empieza contigo!
+            individuales y generar un cambio exponencial. Queremos inspirarte,
+            movilizarte y que formes parte de este movimiento. <strong>¡Porque el cambio
+            que soñamos empieza contigo!</strong>
           </Typography>
         </Box>
         <Box
@@ -293,7 +293,7 @@ export default function Team() {
           />
           <InteractiveCircle
             color={COLORS.green200}
-            text="Patrocinadores"
+            text="Seguidores"
             link="/comunidad"
             size={{xs:"15vw",sm:"9vw",md:"8.5vw"}}
             position={{ top: { xs: "8%",sm:"75%", md: "75%" }, left:{xs:"55%",sm:"70%",md:"70%"}}}
