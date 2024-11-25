@@ -7,7 +7,7 @@
   margin: 10px 0;
   border-radius: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative; 
+  position: relative;
 }
 
 .cardAqua {
@@ -39,21 +39,21 @@
   width: 50%;
 }
 
-.cardContentLeft{
+.cardContentLeft {
   font-size: 2.3rem;
   font-weight: bold;
   width: 50%
 }
 
 .card:hover {
-  transform: scale(1.05); 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
-  cursor: pointer; 
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .closer {
-  position: absolute; 
-  top: 0; 
+  position: absolute;
+  top: 0;
   right: 0;
   padding: 10px;
   cursor: pointer;
@@ -61,4 +61,22 @@
 
 .closer svg {
   font-size: 2rem;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+
+  svg {
+    height: 90px;
+    width: 90px;
+  }
+
+  .cardContent {
+    margin: .5rem;
+    font-size: 1.5rem;
+  }
+
+  .cardContentLeft {
+    margin: .5rem;
+    font-size: 1.5rem;
+  }
 }

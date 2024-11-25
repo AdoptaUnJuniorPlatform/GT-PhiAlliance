@@ -20,7 +20,7 @@ export default function CardManifiestoContent({ content, isOpen, color }) {
 
   return isOpen ? (
     <div className={getClassName()}>
-      <span>{content}</span>
+      <span className={styles.cardContent}>{content}</span>
     </div>
   ) : null;
 }
