@@ -1,6 +1,5 @@
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Section from "../Section/Section";
-import logo from "../../assets/images/Logo Phi-Footer.png";
 import { Box, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Link as LinkMaterial } from "@mui/material";
