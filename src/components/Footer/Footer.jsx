@@ -152,7 +152,7 @@ export default function Footer({ isOpenManifiesto, setIsOpenManifiesto }) {
               <Link
                 to="/"
                 style={{ textDecoration: "none" }}
-                state={{ section: "homeRef" }}
+                state={{ section: "hero" }}
               >
                 <Box
                   sx={{

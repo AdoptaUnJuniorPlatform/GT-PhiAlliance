@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import {
   Box,
   Typography,
@@ -12,12 +12,11 @@ import {
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-import Image1 from "../../../assets/images/Imagen tarjeta blog 1.webp";
-import Image2 from "../../../assets/images/Imagen tarjeta blog 2.webp";
-import Image3 from "../../../assets/images/Imagen tarjeta blog 3.webp";
-import { Link } from "react-router-dom";
-import "./FollowUs.css";
+import Image1 from "../../../assets/images/siguenos/Evento1.webp";
+import Image2 from "../../../assets/images/siguenos/Evento2.webp";
+import Image3 from "../../../assets/images/siguenos/Evento3.webp";
 import Section from "../../Section/Section";
+import "./FollowUs.css";
 
 export default function FollowUs() {
   const cardsData = [
@@ -32,14 +31,14 @@ export default function FollowUs() {
       image: Image1,
       title: "Aprender de referentes: una experiencia transformadora",
       description:
-      "El pasado 13 de marzo de 2024, vivimos una jornada inolvidable en el evento Abundance360 organizado por SingularityU Madrid.",
+        "El pasado 13 de marzo de 2024, vivimos una jornada inolvidable en el evento Abundance360 organizado por SingularityU Madrid.",
       link: "https://www.linkedin.com/company/phialliance/",
     },
     {
       image: Image3,
       title: "¡Qué evento tan espectacular vivimos juntos!",
       description:
-      "Todavía estamos saboreando la increíble energía que nos dejó el último encuentro de PHI Alliance el pasado 19 de septiembre de 2024",
+        "Todavía estamos saboreando la increíble energía que nos dejó el último encuentro de PHI Alliance el pasado 19 de septiembre de 2024",
       link: "https://www.linkedin.com/posts/phialliance_phi-19sept2024-activity-7242884828524630016-Z_x3?utm_source=share&utm_medium=member_desktop",
     },
   ];
@@ -48,14 +47,14 @@ export default function FollowUs() {
 
   const scrollLeft = () => {
     scrollContainerRef.current.scrollBy({
-      left: -300, 
+      left: -300,
       behavior: "smooth",
     });
   };
 
   const scrollRight = () => {
     scrollContainerRef.current.scrollBy({
-      left: 300, 
+      left: 300,
       behavior: "smooth",
     });
   };
@@ -98,11 +97,11 @@ export default function FollowUs() {
             sx={{
               display: { xs: "flex", md: "none" },
               position: "absolute",
-              top:"50%",
+              top: "50%",
               left: 0,
               zIndex: 2,
-              border:"2px #574ea0 solid",
-              color:"#574ea0",
+              border: "2px #574ea0 solid",
+              color: "#574ea0",
               backgroundColor: "white",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
               "&:hover": { backgroundColor: "#9bb4ee" },
@@ -121,7 +120,7 @@ export default function FollowUs() {
               scrollBehavior: "smooth",
               gap: 3,
               padding: "1rem 0",
-              "&::-webkit-scrollbar": { display: "none" }, 
+              "&::-webkit-scrollbar": { display: "none" },
               justifyContent: { md: "space-between" },
               width: "100%",
             }}
@@ -130,7 +129,7 @@ export default function FollowUs() {
               <Card
                 key={index}
                 sx={{
-                  flex: { xs: "0 0 100%", md: "1" }, 
+                  flex: { xs: "0 0 100%", md: "1" },
                   borderRadius: 4,
                   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
                   maxWidth: { xs: "100%", md: "30%" },
@@ -206,11 +205,11 @@ export default function FollowUs() {
             sx={{
               display: { xs: "flex", md: "none" },
               position: "absolute",
-              top:"50%",
+              top: "50%",
               right: 0,
               zIndex: 2,
-              border:"2px #574ea0 solid",
-              color:"#574ea0",
+              border: "2px #574ea0 solid",
+              color: "#574ea0",
               backgroundColor: "white",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
               "&:hover": { backgroundColor: "#9bb4ee" },

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Box, Typography } from "@mui/material";
 import { useLocation } from "react-router-dom";
 

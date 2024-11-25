@@ -1,7 +1,7 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import Section from "../../Section/Section";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
-import ImgProyectos from "../../../assets/images/imagen-proyectos.png";
+import ImgProyectos from "../../../assets/images/proyectos/imagen-proyectos.png";
 import { Link } from "react-router-dom";
 
 export default function Projects() {

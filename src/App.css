@@ -14,11 +14,10 @@
 
 * {
   margin: 0;
-  top: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
   margin: 2rem 4rem;
 }

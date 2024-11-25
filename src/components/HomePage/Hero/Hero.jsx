@@ -1,5 +1,5 @@
 import { Box, Button, Container, Typography } from "@mui/material";
-import LogoHome from "../../../assets/images/logo-home.png";
+import LogoHome from "../../../assets/images/hero/logo-home.png";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import { home } from "../../../assets/data/Home";
 import Section from "../../Section/Section";

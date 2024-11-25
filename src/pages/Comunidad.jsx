@@ -12,8 +12,8 @@ import {
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import GalaxyImg from "../assets/images/comunidad phi  universo vector.svg";
-import Estrellas from "../assets/images/Icono estrellas vector.svg";
+import GalaxyImg from "../assets/images/comunidad/GalaxyImg.svg";
+import Estrellas from "../assets/images/comunidad/EstrellasImg.svg";
 
 // Definición de colores y tamaños
 const COLORS = {

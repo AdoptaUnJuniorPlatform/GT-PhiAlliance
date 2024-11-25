@@ -5,10 +5,10 @@ import Projects from "../components/HomePage/Projects/Projects";
 import ColaboradoresCarousel from "../components/HomePage/Colaboradores/Colaboradores";
 import Team from "../components/HomePage/Team/Team";
 import FollowUs from "../components/HomePage/FollowUs/FollowUs";
-import Home from "../components/HomePage/Home/Home";
+import Hero from "../components/HomePage/Hero/Hero";
 
 export default function HomePage({ isOpenManifiesto, setIsOpenManifiesto }) {
-  const homeRef = useRef(null);
+  const heroRef = useRef(null);
   const aboutUsRef = useRef(null);
   const projectsRef = useRef(null);
   const comunidadRef = useRef(null);
@@ -24,7 +24,7 @@ export default function HomePage({ isOpenManifiesto, setIsOpenManifiesto }) {
 
   const scrollToSection = (section) => {
     const sectionsMap = {
-      home: homeRef,
+      hero: heroRef,
       aboutUs: aboutUsRef,
       projects: projectsRef,
       comunidad: comunidadRef,
@@ -39,8 +39,8 @@ export default function HomePage({ isOpenManifiesto, setIsOpenManifiesto }) {
 
   return (
     <>
-      <div ref={homeRef}>
-        <Home
+      <div ref={heroRef}>
+        <Hero
           isOpenManifiesto={isOpenManifiesto}
           setIsOpenManifiesto={setIsOpenManifiesto}
         />

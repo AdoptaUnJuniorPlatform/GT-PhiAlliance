@@ -1,6 +1,6 @@
 import Section from "../../Section/Section";
 import CardProject from "./CardProject/CardProject";
-import ProjectImg from "../../../assets/images/ProjectImg.png";
+import ProjectImg from "../../../assets/images/proyectos/ProjectImg.png";
 
 export default function Project() {
   return (

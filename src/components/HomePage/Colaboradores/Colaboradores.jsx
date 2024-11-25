@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 import { Box, Typography } from "@mui/material";
 
-import AujLogo from "../../../assets/images/auj-white-logo-with-bg@2x.png";
-import SustainableLogo from "../../../assets/images/logo-Sustainable.png";
-import ExvolutionLogo from "../../../assets/images/EXV-logotipo.png";
-import OrangeFundacionLogo from "../../../assets/images/Fundacion_orange.png";
-import InnoITLogo from "../../../assets/images/logo_innoit.webp";
+import AujLogo from "../../../assets/images/colaboradores/AUJ-logo.png";
+import SustainableLogo from "../../../assets/images/colaboradores/logo-Sustainable.png";
+import ExvolutionLogo from "../../../assets/images/colaboradores/EXV-logo.png";
+import OrangeFundacionLogo from "../../../assets/images/colaboradores/FOrange-logo.png";
+import InnoITLogo from "../../../assets/images/colaboradores/Innoit-logo.webp";
 
 const logos = [
   { src: AujLogo, alt: "AdoptaUnJunior", link: "https://www.linkedin.com/company/adoptaunjunior/" },

@@ -13,7 +13,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "@mui/material";
 const pages = [
-  { label: "Home", section: "home" },
+  { label: "Home", section: "hero" },
   { label: "Qué, cómo y para qué", section: "aboutUs" },
   { label: "Comunidad", section: "comunidad" },
   { label: "Proyectos", section: "projects" },
@@ -58,7 +58,7 @@ function ResponsiveAppBar({ setIsOpenManifiesto }) {
             display: "inline-block",
             cursor: "pointer",
           }}
-          onClick={() => handleNavigateToSection("home")}
+          onClick={() => handleNavigateToSection("hero")}
         >
           <LogoIcon />
         </Box>
