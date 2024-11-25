@@ -5,6 +5,8 @@ import Section from "../Section/Section";
 import logo from "../../assets/images/Logo Phi-Footer.png";
 import { Box, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Link as LinkMaterial } from "@mui/material";
+
 
 export default function Footer() {
   return (
@@ -61,7 +63,7 @@ export default function Footer() {
           <Box component="ul" sx={{ listStyle: "none", padding: 0 }}>
             <li>
               <Link to="/" style={{ textDecoration: "none" }}
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 <Box
                   sx={{
@@ -78,7 +80,7 @@ export default function Footer() {
             </li>
             <li>
               <Link to="/" style={{ textDecoration: "none" }}
-              state={{ section: "aboutUs" }}>
+                state={{ section: "aboutUs" }}>
                 <Box
                   sx={{
                     color: "#686868",
@@ -128,7 +130,7 @@ export default function Footer() {
           <Box component="ul" sx={{ listStyle: "none", padding: 0 }}>
             <li>
               <Link to="/" style={{ textDecoration: "none" }}
-              state={{ section: "followUsRef" }}>
+                state={{ section: "followUsRef" }}>
                 <Box
                   sx={{
                     color: "#686868",
@@ -144,7 +146,7 @@ export default function Footer() {
             </li>
             <li>
               <Link to="/" style={{ textDecoration: "none" }}
-              state={{section:"homeRef"}}>
+                state={{ section: "homeRef" }}>
                 <Box
                   sx={{
                     color: "#686868",
@@ -159,30 +161,34 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-  <a
-    href="https://docs.google.com/forms/d/e/1FAIpQLSe2CSFd2vtrfxSKDMtaVAiGBqOZDC6f2ZVs2IjHMZD_OFPXXg/formrestricted"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{
-      textDecoration: "none",
-      color: "#686868",
-      transition: "color 0.3s",
-    }}
-  >
-    <Box
-      sx={{
-        "&:hover": {
-          color: "#404040",
-        },
-      }}
-    >
-      Únete
-    </Box>
-  </a>
-</li>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe2CSFd2vtrfxSKDMtaVAiGBqOZDC6f2ZVs2IjHMZD_OFPXXg/formrestricted"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: "none",
+                  color: "#686868",
+                  transition: "color 0.3s",
+                }}
+              >
+                <Box
+                  sx={{
+                    "&:hover": {
+                      color: "#404040",
+                    },
+                  }}
+                >
+                  Únete
+                </Box>
+              </a>
+            </li>
 
             <li>
-              <Link to="/contact" style={{ textDecoration: "none" }}>
+              <LinkMaterial
+                href="https://chat.whatsapp.com/IA73d8ugMnX0TMRiWF437p"
+                target="_blank"
+                sx={{textDecoration: "none"}}
+              >
                 <Box
                   sx={{
                     color: "#686868",
@@ -194,7 +200,7 @@ export default function Footer() {
                 >
                   Contáctanos
                 </Box>
-              </Link>
+              </LinkMaterial>
             </li>
           </Box>
 
