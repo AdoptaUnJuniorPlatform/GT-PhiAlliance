@@ -4,10 +4,8 @@ import NorthEastIcon from "@mui/icons-material/NorthEast";
 import { home } from "../../../assets/data/Home";
 import Section from "../../Section/Section";
 import Manifiesto from "./Manifiesto/Manifiesto";
-import { useState } from "react";
 
-export default function Home() {
-  const [isOpenManifiesto, setIsOpenManifiesto] = useState(false);
+export default function Home({ isOpenManifiesto, setIsOpenManifiesto }) {
   return (
     <Section>
       <Box component="section" id="Home" sx={{ pt: 12, pb: 8 }}>

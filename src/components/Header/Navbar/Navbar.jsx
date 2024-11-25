@@ -12,7 +12,6 @@ import LogoIcon from "../../Icons/LogoIcon";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "@mui/material";
-
 const pages = [
   { label: "Home", section: "home" },
   { label: "Qué, cómo y para qué", section: "aboutUs" },
@@ -21,12 +20,13 @@ const pages = [
   { label: "Síguenos", section: "followUs" },
 ];
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar({ setIsOpenManifiesto }) {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const navigate = useNavigate();
 
   const handleNavigateToSection = (section) => {
-    navigate("/", { state: { section } }); // Navegamos al HomePage con la sección especificada
+    navigate("/", { state: { section } });
+    setIsOpenManifiesto(false);
   };
 
   const handleOpenNavMenu = (event) => {
@@ -165,7 +165,6 @@ function ResponsiveAppBar() {
             href="https://chat.whatsapp.com/IA73d8ugMnX0TMRiWF437p"
             target="_blank"
           >
-
             <Button
               variant="outlined"
               sx={{
