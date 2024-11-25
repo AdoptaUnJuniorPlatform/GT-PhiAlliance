@@ -7,7 +7,7 @@ import Team from "../components/HomePage/Team/Team";
 import FollowUs from "../components/HomePage/FollowUs/FollowUs";
 import Home from "../components/HomePage/Home/Home";
 
-export default function HomePage() {
+export default function HomePage({ isOpenManifiesto, setIsOpenManifiesto }) {
   const homeRef = useRef(null);
   const aboutUsRef = useRef(null);
   const projectsRef = useRef(null);
@@ -40,7 +40,10 @@ export default function HomePage() {
   return (
     <>
       <div ref={homeRef}>
-        <Home />
+        <Home
+          isOpenManifiesto={isOpenManifiesto}
+          setIsOpenManifiesto={setIsOpenManifiesto}
+        />
       </div>
       <div ref={aboutUsRef}>
         <QueYParaQue />

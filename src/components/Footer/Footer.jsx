@@ -5,8 +5,12 @@ import { Box, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Link as LinkMaterial } from "@mui/material";
 
+export default function Footer({ isOpenManifiesto, setIsOpenManifiesto }) {
+  const handleNavigateToSection = () => {
+    window.scrollTo("Home", { behavior: "smooth" });
+    setIsOpenManifiesto(!isOpenManifiesto);
+  };
 
-export default function Footer() {
   return (
     <Section>
       {/* Sección footer */}
@@ -60,7 +64,9 @@ export default function Footer() {
           {/* Primera columna */}
           <Box component="ul" sx={{ listStyle: "none", padding: 0 }}>
             <li>
-              <Link to="/" style={{ textDecoration: "none" }}
+              <Link
+                to="/"
+                style={{ textDecoration: "none" }}
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 <Box
@@ -77,8 +83,11 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/" style={{ textDecoration: "none" }}
-                state={{ section: "aboutUs" }}>
+              <Link
+                to="/"
+                style={{ textDecoration: "none" }}
+                state={{ section: "aboutUs" }}
+              >
                 <Box
                   sx={{
                     color: "#686868",
@@ -127,8 +136,11 @@ export default function Footer() {
           {/* Segunda columna */}
           <Box component="ul" sx={{ listStyle: "none", padding: 0 }}>
             <li>
-              <Link to="/" style={{ textDecoration: "none" }}
-                state={{ section: "followUsRef" }}>
+              <Link
+                to="/"
+                style={{ textDecoration: "none" }}
+                state={{ section: "followUsRef" }}
+              >
                 <Box
                   sx={{
                     color: "#686868",
@@ -143,8 +155,11 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/" style={{ textDecoration: "none" }}
-                state={{ section: "homeRef" }}>
+              <Link
+                to="/"
+                style={{ textDecoration: "none" }}
+                state={{ section: "homeRef" }}
+              >
                 <Box
                   sx={{
                     color: "#686868",
@@ -153,6 +168,7 @@ export default function Footer() {
                       color: "#404040",
                     },
                   }}
+                  onClick={() => handleNavigateToSection()}
                 >
                   Manifiesto
                 </Box>
@@ -185,7 +201,7 @@ export default function Footer() {
               <LinkMaterial
                 href="https://chat.whatsapp.com/IA73d8ugMnX0TMRiWF437p"
                 target="_blank"
-                sx={{textDecoration: "none"}}
+                sx={{ textDecoration: "none" }}
               >
                 <Box
                   sx={{
@@ -205,7 +221,10 @@ export default function Footer() {
           {/* Tercera columna */}
           <Box component="ul" sx={{ listStyle: "none", padding: 0 }}>
             <li>
-              <Link to="/legal#privacy-policy" style={{ textDecoration: "none" }}>
+              <Link
+                to="/legal#privacy-policy"
+                style={{ textDecoration: "none" }}
+              >
                 <Box
                   sx={{
                     color: "#686868",
@@ -220,7 +239,10 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/legal#cookies-policy" style={{ textDecoration: "none" }}>
+              <Link
+                to="/legal#cookies-policy"
+                style={{ textDecoration: "none" }}
+              >
                 <Box
                   sx={{
                     color: "#686868",
@@ -283,4 +305,3 @@ export default function Footer() {
     </Section>
   );
 }
-
