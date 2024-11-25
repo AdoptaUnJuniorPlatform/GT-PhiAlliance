@@ -2,7 +2,12 @@ import { useState } from "react";
 import CardManifiesto from "./CardManifiesto/CardManifiesto";
 import CardManifiestoContent from "./CardManifiestoContent/CardManifiestoContent";
 import styles from "./Manifiesto.module.css";
-import LanguageIcon from "@mui/icons-material/Language";
+import BombillaIcon from "../../../Icons/BombillaIcon";
+import PlanetIcon from "../../../Icons/PlanetIcon";
+import NetworkIcon from "../../../Icons/NetworkIcon";
+import HandsIcon from "../../../Icons/HandsIcon";
+import RocketIcon from "../../../Icons/RocketIcon";
+import { manifiesto } from "../../../../assets/data/Manifiesto";
 
 export default function Manifiesto({ isOpen, onClose, setIsOpen }) {
   const [openCard, setOpenCard] = useState(false);
@@ -17,7 +22,7 @@ export default function Manifiesto({ isOpen, onClose, setIsOpen }) {
         <div className={styles.cards}>
           <CardManifiesto
             color="aqua"
-            icon={<LanguageIcon sx={{ fontSize: "7rem" }} />}
+            icon={<PlanetIcon />}
             content="Innovación para mejorar vidas"
             setIsOpenContent={() => handleCardClick("aqua")}
             isOpenContent={openCard === "aqua"}
@@ -26,29 +31,32 @@ export default function Manifiesto({ isOpen, onClose, setIsOpen }) {
           />
           <CardManifiesto
             color="yellow"
-            icon={<LanguageIcon sx={{ fontSize: "7rem" }} />}
-            content="Innovación para mejorar vidas"
+            icon={<BombillaIcon />}
+            content="Un futuro que soñamos y creamos juntos"
             setIsOpenContent={() => handleCardClick("yellow")}
             isOpenContent={openCard === "yellow"}
+            reversedOrder
           />
           <CardManifiesto
             color="purple"
-            icon={<LanguageIcon sx={{ fontSize: "7rem" }} />}
-            content="Innovación para mejorar vidas"
+            icon={<HandsIcon />}
+            content="Una comunidad unida para el cambio positivo"
             setIsOpenContent={() => handleCardClick("purple")}
             isOpenContent={openCard === "purple"}
           />
           <CardManifiesto
             color="green"
-            icon={<LanguageIcon sx={{ fontSize: "7rem" }} />}
-            content="Innovación para mejorar vidas"
+            icon={<NetworkIcon />}
+            content="Un espacio para inspirarse, colaborar y construir impacto"
             setIsOpenContent={() => handleCardClick("green")}
             isOpenContent={openCard === "green"}
+            reversedOrder
+
           />
           <CardManifiesto
             color="orange"
-            icon={<LanguageIcon sx={{ fontSize: "7rem" }} />}
-            content="Innovación para mejorar vidas"
+            icon={<RocketIcon />}
+            content="Únete a esta misión y sé parte de un cambio exponencial"
             setIsOpenContent={() => handleCardClick("orange")}
             isOpenContent={openCard === "orange"}
           />
@@ -57,7 +65,7 @@ export default function Manifiesto({ isOpen, onClose, setIsOpen }) {
           <CardManifiestoContent
             color={openCard}
             isOpen={true}
-            content="En PHI Alliance, creemos en el poder de las tecnologías exponenciales para multiplicar el impacto positivo. Imaginamos un mundo donde cada avance no solo transforma, sino que eleva la calidad de vida de todos, conectando a personas y comunidades en una misión comun."
+            content={manifiesto[openCard].content}
           />
         )}
       </div>

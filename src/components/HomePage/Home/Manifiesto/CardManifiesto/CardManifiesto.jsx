@@ -5,10 +5,11 @@ export default function CardManifiesto({
   icon,
   content,
   color,
-  setIsOpenContent, // Cambié el nombre para que coincida con el que pasas desde Manifiesto
+  setIsOpenContent,
   isOpenContent,
   isCloser,
-  setIsModelOpen, // Añadimos esta propiedad para manejar el cierre
+  setIsModelOpen, 
+  reversedOrder
 }) {
   const getClassName = () => {
     switch (color) {
@@ -39,8 +40,19 @@ export default function CardManifiesto({
 
   return (
     <div className={getClassName()} onClick={handleCardClick}>
-      {icon}
-      <span className={styles.cardContent}>{content}</span>
+      {reversedOrder ? (
+        <>
+          <span className={styles.cardContentLeft}>{content}</span>
+          {icon}
+        </>
+      ) : (
+        <>
+          {icon}
+          <span className={styles.cardContent}>{content}</span>
+        </>
+      )}
+
+
       {isCloser ? (
         <div className={styles.closer} onClick={handleCloseClick}>
           <CloseRoundedIcon />

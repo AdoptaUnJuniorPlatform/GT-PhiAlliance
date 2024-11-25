@@ -1,24 +1,24 @@
-/* Contenedor del modal (fondo transparente) */
 .manifiesto {
-  position: fixed; /* Fija el modal en la pantalla */
-  top: 6rem;
+  position: fixed;
+  top: 4rem;
   left: 0;
-  width: 100%; /* Ocupa todo el ancho de la pantalla */
-  height: 100%; /* Ocupa todo el alto de la pantalla */
+  width: 100%; 
+  height: 100%;
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
+  justify-content: center; 
+  justify-content: center;
   background-color: transparent;
-  z-index: 1000; /* Asegura que esté sobre otros elementos */
+  z-index: 1000; 
 }
 
-/* Contenido del modal */
 .modalContent {
   margin: 4rem;
-  border-radius: 10px; /* Bordes redondeados */
-  width: 100%; /* Ocupa el 100% del contenedor */
+  border-radius: 10px;
+  width: 100%; 
   display: flex;
-  flex-direction: row; /* Acomoda elementos en columna */
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .cards {
