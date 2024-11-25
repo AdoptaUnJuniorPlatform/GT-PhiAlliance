@@ -4,6 +4,7 @@ import logo from "../../assets/images/Logo Phi-Footer.png";
 import { Box, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Link as LinkMaterial } from "@mui/material";
+import LogoIcon from "../Icons/LogoIcon";
 
 export default function Footer({ isOpenManifiesto, setIsOpenManifiesto }) {
   const handleNavigateToSection = () => {
@@ -28,26 +29,20 @@ export default function Footer({ isOpenManifiesto, setIsOpenManifiesto }) {
       >
         {/* Columna 1: Logo */}
         <Box
+          component="div"
           sx={{
             display: "flex",
             justifyContent: "flex-start",
+            height: "auto",
+            cursor: "pointer",
+            transition: "transform 0.2s ease-in-out", // Transición suave
+            "&:hover": {
+              transform: "translateY(-5px)", // Mueve hacia arriba 5px en hover
+            },
           }}
           onClick={() => window.scrollTo("Home", { behavior: "smooth" })}
         >
-          <Box
-            component="img"
-            src={logo}
-            alt="PHI Alliance Logo"
-            sx={{
-              width: "60px",
-              height: "auto",
-              cursor: "pointer",
-              transition: "box-shadow 0.3s ease-in-out",
-              "&:hover": {
-                boxShadow: "0px 5px 10px 5px rgba(96, 251, 186, 0.5)",
-              },
-            }}
-          />
+          <LogoIcon />
         </Box>
 
         {/* Columna 2: Enlaces */}
